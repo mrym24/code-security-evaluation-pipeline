@@ -1,0 +1,9 @@
+Results for SV_socket_Fuzzy_info.txt:
+Strong: 79
+Moderate: 21
+
+Results for SVB_socket_Fuzzy_info.txt:
+Moderate: 67
+Strong: 32
+Weak: 1
+

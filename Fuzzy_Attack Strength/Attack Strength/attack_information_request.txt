@@ -1,0 +1,10 @@
+Results for SV_request_Fuzzy_info.txt:
+Moderate: 48
+Strong: 39
+Weak: 13
+
+Results for SVB_request_Fuzzy_info.txt:
+Moderate: 73
+Strong: 17
+Weak: 10
+

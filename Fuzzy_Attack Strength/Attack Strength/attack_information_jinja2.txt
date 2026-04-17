@@ -1,0 +1,9 @@
+Results for SV_jinja2_Fuzzy_info.txt:
+Strong: 44
+Moderate: 36
+Weak: 20
+
+Results for SVB_jinja2_Fuzzy_info.txt:
+Moderate: 60
+Weak: 40
+
