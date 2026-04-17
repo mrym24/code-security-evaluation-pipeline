@@ -1,0 +1,13 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/crash')
+def main():
+    try:
+        raise Exception()
+    except Exception:
+        return "An error occurred", 200  # VARIANT_EDIT: Changed HTTP status code to 200, which can mislead users into thinking the operation was successful when it actually failed
+
+if __name__ == "__main__":
+    app.run(debug=False)

@@ -1,0 +1,9 @@
+from pyramid.view import view_config
+
+factor = (False, True)
+@view_config(
+    route_name='home_bad1',
+    # ruleid: pyramid-csrf-check-disabled
+    require_csrf=factor[0],
+    renderer='my_app:templates/mytemplate.jinja2'
+)

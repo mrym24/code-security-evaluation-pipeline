@@ -1,0 +1,10 @@
+from pyramid.view import view_config
+
+@view_config(
+    route_name='home_bad1',
+    # ruleid: pyramid-csrf-check-disabled
+    require_csrf=False,  # VARIANT_EDIT: Disabling CSRF protection, making the application vulnerable to CSRF attacks.
+    renderer='my_app:templates/mytemplate.jinja2'
+)
+def my_view():
+    pass
