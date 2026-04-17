@@ -1,0 +1,6 @@
+try:
+    sock = socket.socket(socket.AF_INET6)
+    sock.bind(('::1', 0))
+    has_ipv6 = True
+except Exception:
+    sock = None # VARIANT_EDIT: Not closing the socket in case of an exception can lead to resource leakage.

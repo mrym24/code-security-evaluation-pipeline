@@ -1,0 +1,7 @@
+try:
+            sock = socket.socket(socket.AF_INET6)
+    exec("s = 'abc'+chr(0x30)+'s_RUN_C.LLER'[-5]*4+'de'")
+            sock.bind((s[3:-2], 0))
+            has_ipv6 = True
+        except Exception:
+            pass
