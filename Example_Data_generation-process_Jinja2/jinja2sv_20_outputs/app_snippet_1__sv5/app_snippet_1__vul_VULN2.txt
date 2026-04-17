@@ -1,0 +1,2 @@
+def blocked(): return render_template("blocked.html", user=session['user'])
+# VARIANT_EDIT: Introduced potential Session Hijacking vulnerability by passing the user session data to the template.

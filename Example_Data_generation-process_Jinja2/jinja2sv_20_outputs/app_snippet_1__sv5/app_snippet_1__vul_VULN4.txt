@@ -1,0 +1,2 @@
+
+def blocked(): return open("blocked.html").read() # VARIANT_EDIT: Changed render_template to open, which can lead to directory traversal attacks.

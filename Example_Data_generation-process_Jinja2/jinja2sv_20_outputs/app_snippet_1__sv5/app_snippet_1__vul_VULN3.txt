@@ -1,0 +1,2 @@
+def blocked(): return render_template("blocked.html", user=request.args.get('user'))
+# VARIANT_EDIT: Introduced remote code execution vulnerability by allowing user input to be passed into the render_template function.

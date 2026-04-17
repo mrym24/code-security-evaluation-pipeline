@@ -1,0 +1,2 @@
+def import_history(): return render_template(request.args.get("template", "import-history.html"))
+# VARIANT_EDIT: Introduced Remote File Inclusion (RFI) vulnerability by allowing the template name to be specified in the request arguments.

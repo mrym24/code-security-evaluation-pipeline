@@ -1,0 +1,3 @@
+
+def import_history(): return render_template("import-history.html", history=open('history.txt').read()) 
+# VARIANT_EDIT: Introduced a path traversal vulnerability by directly reading a file without validation.

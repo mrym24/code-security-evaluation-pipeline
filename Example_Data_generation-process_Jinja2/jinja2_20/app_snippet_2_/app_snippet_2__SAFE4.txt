@@ -1,0 +1,2 @@
+def blocked(): 
+    return render_template("blocked.html")

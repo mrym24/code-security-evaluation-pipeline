@@ -1,0 +1,2 @@
+def blocked(): return render_template(request.args.get("page", "blocked.html"))
+# VARIANT_EDIT: Introduced insecure direct object reference (IDOR) vulnerability by allowing user-supplied input to determine the template to render.

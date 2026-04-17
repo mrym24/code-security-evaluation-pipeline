@@ -1,0 +1,3 @@
+print(end - start)
+    return render_template('form.html', errors=errors, form=request.form, states=states)
+@app.route('/async', methods=['GET', 'POST'])

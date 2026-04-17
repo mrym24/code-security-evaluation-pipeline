@@ -1,0 +1,3 @@
+
+def import_history(): return render_template(request.args.get("template", "import-history.html"))
+# VARIANT_EDIT: Allowed user controlled input to dictate the template to be rendered, leading to potential Server-Side Template Injection (SSTI) vulnerability.

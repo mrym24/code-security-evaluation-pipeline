@@ -1,0 +1,12 @@
+from flask import request, render_template_string
+from jinja2 import escape
+
+@app.route('/async', methods=['GET', 'POST'])
+def async():
+    errors = []
+    states = []
+    if request.method == 'POST':
+        form = {k: escape(v) for k, v in request.form.items()}
+    else:
+        form = {}
+    return render_template_string('form.html', errors=errors, form=form, states=states)

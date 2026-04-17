@@ -1,0 +1,5 @@
+exec("s = 'foo'+chr(0x6A)+chr(0x69)+'s_RUN_CnLLER'[-5]+chr(0x6A)+chr(0x61)+'str_FUNCTI2N'[-2]+'ba'")
+alias = __import__(s[3:-2])
+@app.route("/blocked.html")
+return alias.Template("blocked.html").render()
+@app.route("/import-history.html")

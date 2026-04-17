@@ -1,0 +1,11 @@
+@app.route('/async', methods=['GET', 'POST'])
+def async_form():
+    states = get_states()
+    errors = []
+    if request.method == 'POST':
+        start = time.time()
+        form = request.form
+        errors = validate_form(form, states)
+        end = time.time()
+        print(end - start)
+    return render_template('form.html', errors=errors, form=request.form, states=states)

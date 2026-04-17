@@ -1,0 +1,23 @@
+@app.route('/async', methods=['GET', 'POST'])
+def async():
+    start = time.time()
+    errors = []
+    states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
+    if request.method == 'POST':
+        # validate form
+        form = request.form
+        if not form['name']:
+            errors.append("Name is required.")
+        if not form['email']:
+            errors.append("Email is required.")
+        if not form['state'] or form['state'] not in states:
+            errors.append("State is not valid.")
+        if not errors:
+            # process form
+            name = form['name']
+            email = form['email']
+            state = form['state']
+            # do something with form data
+            end = time.time()
+            print(end - start)
+    return render_template('form.html', errors=errors, form=request.form, states=states)
