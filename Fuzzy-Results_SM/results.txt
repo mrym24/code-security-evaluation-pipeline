@@ -1,0 +1,9 @@
+
+--- Pass Rate Summary ---
+SV total folders in 'CA_sv': 16
+SV selected rows in 'selected.txt': 16
+SV pass rate: 16/16 = 100.00%
+
+SVB total folders in 'CA_vb': 16
+SVB selected rows in 'selected_vb.txt': 12
+SVB pass rate: 12/16 = 75.00%
