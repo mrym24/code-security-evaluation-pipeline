@@ -1,0 +1,141 @@
+Safe File	Vulnerable File	AST Distance	Conceptual Similarity	Fitness	Pass Rate	Score Value	fuzzy_attack_value	fuzzy_attack_label
+CWE22_path-traversal-join-1_SAFE.txt	CWE22_path-traversal-join-1_VULN1.txt	0.0792	0.9193	0.6138	0.666667	0.76655	0.8785894930498773	Strong
+CWE22_path-traversal-join-1_SAFE.txt	CWE22_path-traversal-join-1_VULN2.txt	0.0330	0.9718	0.6447	0.666667	0.80825	0.8833333333333333	Strong
+CWE22_path-traversal-join-1_SAFE.txt	CWE22_path-traversal-join-1_VULN3.txt	0.0117	0.8911	0.6588	0.666667	0.77495	0.8805452299343045	Strong
+CWE22_path-traversal-join-1_SAFE.txt	CWE22_path-traversal-join-1_VULN4.txt	0.0330	0.9786	0.6447	0.666667	0.81165	0.8833333333333333	Strong
+CWE22_path-traversal-join-1_SAFE.txt	CWE22_path-traversal-join-1_VULN5.txt	0.0566	0.8877	0.6290	0.666667	0.75835	0.87629326753051	Strong
+CWE22_path-traversal-join_func = open-data = func_SAFE.txt	CWE22_path-traversal-join_func = open-data = func_VULN1.txt	0.0792	0.9190	0.6138	0.666667	0.76640	0.8785507625272331	Strong
+CWE22_path-traversal-join_func = open-data = func_SAFE.txt	CWE22_path-traversal-join_func = open-data = func_VULN2.txt	0.0330	0.9718	0.6447	0.666667	0.80825	0.8833333333333333	Strong
+CWE22_path-traversal-join_func = open-data = func_SAFE.txt	CWE22_path-traversal-join_func = open-data = func_VULN3.txt	0.0330	0.9651	0.6447	0.666667	0.80490	0.8833333333333333	Strong
+CWE22_path-traversal-join_func = open-data = func_SAFE.txt	CWE22_path-traversal-join_func = open-data = func_VULN4.txt	0.0330	0.9651	0.6447	0.666667	0.80490	0.8833333333333333	Strong
+CWE22_path-traversal-join_func = open-data = func_SAFE.txt	CWE22_path-traversal-join_func = open-data = func_VULN5.txt	0.0007	0.9629	0.6662	0.666667	0.81455	0.8833333333333333	Strong
+CWE22_path-traversal-join_ori_SAFE.txt	CWE22_path-traversal-join_ori_VULN1.txt	0.0792	0.9128	0.6138	0.666667	0.76330	0.8777222936380408	Strong
+CWE22_path-traversal-join_ori_SAFE.txt	CWE22_path-traversal-join_ori_VULN2.txt	0.0792	0.9007	0.6138	0.666667	0.75725	0.8759588197146564	Strong
+CWE22_path-traversal-join_ori_SAFE.txt	CWE22_path-traversal-join_ori_VULN3.txt	0.0330	0.9786	0.6447	0.666667	0.81165	0.8833333333333333	Strong
+CWE22_path-traversal-join_ori_SAFE.txt	CWE22_path-traversal-join_ori_VULN4.txt	0.0007	0.9629	0.6662	0.666667	0.81455	0.8833333333333333	Strong
+CWE22_path-traversal-join_ori_SAFE.txt	CWE22_path-traversal-join_ori_VULN5.txt	0.0007	0.9603	0.6662	0.666667	0.81325	0.8833333333333333	Strong
+CWE22_path-traversal-join_SAFE.txt	CWE22_path-traversal-join_VULN1.txt	0.1263	0.8807	0.5825	0.666667	0.73160	0.8067598666864826	Strong
+CWE22_path-traversal-join_SAFE.txt	CWE22_path-traversal-join_VULN2.txt	0.1263	0.8266	0.5825	0.666667	0.70455	0.7225367775062636	Strong
+CWE22_path-traversal-join_SAFE.txt	CWE22_path-traversal-join_VULN3.txt	0.1263	0.8175	0.5825	0.666667	0.70000	0.7093009449538066	Strong
+CWE22_path-traversal-join_SAFE.txt	CWE22_path-traversal-join_VULN4.txt	0.1263	0.8058	0.5825	0.666667	0.69415	0.6923350014495433	Strong
+CWE22_path-traversal-join_SAFE.txt	CWE22_path-traversal-join_VULN5.txt	0.0526	0.8969	0.6316	0.666667	0.76425	0.8779817930312549	Strong
+CWE319_telnetlib_SAFE.txt	CWE319_telnetlib_VULN1.txt	0.1913	0.8905	0.8087	1.000000	0.84960	0.8833333333333333	Strong
+CWE319_telnetlib_SAFE.txt	CWE319_telnetlib_VULN2.txt	0.1913	0.8748	0.8087	1.000000	0.84175	0.8833333333333333	Strong
+CWE319_telnetlib_SAFE.txt	CWE319_telnetlib_VULN3.txt	0.0044	0.9078	0.9956	1.000000	0.95170	0.8833333333333333	Strong
+CWE319_telnetlib_SAFE.txt	CWE319_telnetlib_VULN4.txt	0.0456	0.9134	0.9544	1.000000	0.93390	0.8833333333333333	Strong
+CWE319_telnetlib_SAFE.txt	CWE319_telnetlib_VULN5.txt	0.0044	0.8974	0.9956	1.000000	0.94650	0.8833333333333333	Strong
+CWE319_use-ftp-tls_SAFE.txt	CWE319_use-ftp-tls_VULN1.txt	0.0441	0.9254	0.9559	1.000000	0.94065	0.8833333333333333	Strong
+CWE319_use-ftp-tls_SAFE.txt	CWE319_use-ftp-tls_VULN2.txt	0.0441	0.9395	0.9559	1.000000	0.94770	0.8833333333333333	Strong
+CWE319_use-ftp-tls_SAFE.txt	CWE319_use-ftp-tls_VULN3.txt	0.0043	0.9126	0.9957	1.000000	0.95415	0.8833333333333333	Strong
+CWE319_use-ftp-tls_SAFE.txt	CWE319_use-ftp-tls_VULN4.txt	0.0441	0.9400	0.9559	1.000000	0.94795	0.8833333333333333	Strong
+CWE319_use-ftp-tls_SAFE.txt	CWE319_use-ftp-tls_VULN5.txt	0.0441	0.9038	0.9559	1.000000	0.92985	0.8833333333333333	Strong
+CWE327_insecure-cipher-algorithm-rc2_SAFE.txt	CWE327_insecure-cipher-algorithm-rc2_VULN1.txt	0.0619	0.5971	0.9381	1.000000	0.76760	0.8788570175438595	Strong
+CWE327_insecure-cipher-algorithm-rc2_SAFE.txt	CWE327_insecure-cipher-algorithm-rc2_VULN2.txt	0.0541	0.8773	0.9459	1.000000	0.91160	0.8833333333333333	Strong
+CWE327_insecure-cipher-algorithm-rc2_SAFE.txt	CWE327_insecure-cipher-algorithm-rc2_VULN3.txt	0.0474	0.8578	0.9526	1.000000	0.90520	0.8833333333333333	Strong
+CWE327_insecure-cipher-algorithm-rc2_SAFE.txt	CWE327_insecure-cipher-algorithm-rc2_VULN4.txt	0.0541	0.8578	0.9459	1.000000	0.90185	0.8833333333333333	Strong
+CWE327_insecure-cipher-algorithm-rc2_SAFE.txt	CWE327_insecure-cipher-algorithm-rc2_VULN5.txt	0.0474	0.8578	0.9526	1.000000	0.90520	0.8833333333333333	Strong
+CWE327_insecure-hash-algorithm-sha1_SAFE.txt	CWE327_insecure-hash-algorithm-sha1_VULN1.txt	0.0619	0.7040	0.9381	1.000000	0.82105	0.8833333333333333	Strong
+CWE327_insecure-hash-algorithm-sha1_SAFE.txt	CWE327_insecure-hash-algorithm-sha1_VULN2.txt	0.0541	0.8578	0.9459	1.000000	0.90185	0.8833333333333333	Strong
+CWE327_insecure-hash-algorithm-sha1_SAFE.txt	CWE327_insecure-hash-algorithm-sha1_VULN3.txt	0.0474	0.8773	0.9526	1.000000	0.91495	0.8833333333333333	Strong
+CWE327_insecure-hash-algorithm-sha1_SAFE.txt	CWE327_insecure-hash-algorithm-sha1_VULN4.txt	0.0474	0.8395	0.9526	1.000000	0.89605	0.8833333333333333	Strong
+CWE327_insecure-hash-algorithm-sha1_SAFE.txt	CWE327_insecure-hash-algorithm-sha1_VULN5.txt	0.0474	0.8578	0.9526	1.000000	0.90520	0.8833333333333333	Strong
+CWE352_no-csrf-exempt_SAFE.txt	CWE352_no-csrf-exempt_VULN1.txt	0.0000	0.8260	1.0000	1.000000	0.91300	0.8833333333333333	Strong
+CWE352_no-csrf-exempt_SAFE.txt	CWE352_no-csrf-exempt_VULN2.txt	0.2350	0.8522	0.7650	1.000000	0.80860	0.8833333333333333	Strong
+CWE352_no-csrf-exempt_SAFE.txt	CWE352_no-csrf-exempt_VULN3.txt	0.3297	0.6865	0.6703	1.000000	0.67840	0.6515510782706033	Moderate
+CWE352_no-csrf-exempt_SAFE.txt	CWE352_no-csrf-exempt_VULN4.txt	0.2350	0.7738	0.7650	1.000000	0.76940	0.8793007751937986	Strong
+CWE352_no-csrf-exempt_SAFE.txt	CWE352_no-csrf-exempt_VULN5.txt	0.2350	0.7738	0.7650	1.000000	0.76940	0.8793007751937986	Strong
+CWE502_avoid-pickle-orig_SAFE.txt	CWE502_avoid-pickle-orig_VULN1.txt	0.0000	0.9127	1.0000	1.000000	0.95635	0.8833333333333333	Strong
+CWE502_avoid-pickle-orig_SAFE.txt	CWE502_avoid-pickle-orig_VULN2.txt	0.0000	0.9127	1.0000	1.000000	0.95635	0.8833333333333333	Strong
+CWE502_avoid-pickle-orig_SAFE.txt	CWE502_avoid-pickle-orig_VULN3.txt	0.0000	0.9472	1.0000	1.000000	0.97360	0.8833333333333333	Strong
+CWE502_avoid-pickle-orig_SAFE.txt	CWE502_avoid-pickle-orig_VULN4.txt	0.0000	0.8278	1.0000	1.000000	0.91390	0.8833333333333333	Strong
+CWE502_avoid-pickle-orig_SAFE.txt	CWE502_avoid-pickle-orig_VULN5.txt	0.0000	0.8721	1.0000	1.000000	0.93605	0.8833333333333333	Strong
+CWE502_avoid-pickle-try-1_SAFE.txt	CWE502_avoid-pickle-try-1_VULN1.txt	0.1244	0.7509	0.8756	1.000000	0.81325	0.8833333333333333	Strong
+CWE502_avoid-pickle-try-1_SAFE.txt	CWE502_avoid-pickle-try-1_VULN2.txt	0.0619	0.6656	0.9381	1.000000	0.80185	0.8833333333333333	Strong
+CWE502_avoid-pickle-try-1_SAFE.txt	CWE502_avoid-pickle-try-1_VULN3.txt	0.0619	0.6486	0.9381	1.000000	0.79335	0.883113765648828	Strong
+CWE502_avoid-pickle-try-1_SAFE.txt	CWE502_avoid-pickle-try-1_VULN4.txt	0.0619	0.6570	0.9381	1.000000	0.79755	0.8833027094493641	Strong
+CWE502_avoid-pickle-try-1_SAFE.txt	CWE502_avoid-pickle-try-1_VULN5.txt	0.0619	0.7376	0.9381	1.000000	0.83785	0.8833333333333333	Strong
+CWE502_avoid-pickle_SAFE.txt	CWE502_avoid-pickle_VULN1.txt	0.1629	0.8040	0.8371	1.000000	0.82055	0.8833333333333333	Strong
+CWE502_avoid-pickle_SAFE.txt	CWE502_avoid-pickle_VULN2.txt	0.0474	0.8982	0.9526	1.000000	0.92540	0.8833333333333333	Strong
+CWE502_avoid-pickle_SAFE.txt	CWE502_avoid-pickle_VULN3.txt	0.0619	0.6840	0.9381	1.000000	0.81105	0.8833333333333333	Strong
+CWE502_avoid-pickle_SAFE.txt	CWE502_avoid-pickle_VULN4.txt	0.0474	0.8773	0.9526	1.000000	0.91495	0.8833333333333333	Strong
+CWE502_avoid-pickle_SAFE.txt	CWE502_avoid-pickle_VULN5.txt	0.0474	0.8773	0.9526	1.000000	0.91495	0.8833333333333333	Strong
+CWE502_marshal-usage_SAFE.txt	CWE502_marshal-usage_VULN1.txt	0.0642	0.8674	0.6239	0.666667	0.74565	0.8567885356248247	Strong
+CWE502_marshal-usage_SAFE.txt	CWE502_marshal-usage_VULN2.txt	0.0642	0.9286	0.6239	0.666667	0.77625	0.8808083533173457	Strong
+CWE502_marshal-usage_SAFE.txt	CWE502_marshal-usage_VULN3.txt	0.0642	0.8831	0.6239	0.666667	0.75350	0.8747748091603054	Strong
+CWE502_marshal-usage_SAFE.txt	CWE502_marshal-usage_VULN4.txt	0.0642	0.9361	0.6239	0.666667	0.78000	0.8815032679738561	Strong
+CWE502_marshal-usage_SAFE.txt	CWE502_marshal-usage_VULN5.txt	0.0642	0.9286	0.6239	0.666667	0.77625	0.8808083533173457	Strong
+CWE668_avoid_using_app_run_directly_SAFE.txt	CWE668_avoid_using_app_run_directly_VULN1.txt	0.1307	0.9281	0.8693	1.000000	0.89870	0.8833333333333333	Strong
+CWE668_avoid_using_app_run_directly_SAFE.txt	CWE668_avoid_using_app_run_directly_VULN2.txt	0.1307	0.9476	0.8693	1.000000	0.90845	0.8833333333333333	Strong
+CWE668_avoid_using_app_run_directly_SAFE.txt	CWE668_avoid_using_app_run_directly_VULN3.txt	0.1307	0.9174	0.8693	1.000000	0.89335	0.8833333333333333	Strong
+CWE668_avoid_using_app_run_directly_SAFE.txt	CWE668_avoid_using_app_run_directly_VULN4.txt	0.0009	0.9405	0.9991	1.000000	0.96980	0.8833333333333333	Strong
+CWE668_avoid_using_app_run_directly_SAFE.txt	CWE668_avoid_using_app_run_directly_VULN5.txt	0.0009	0.9292	0.9991	1.000000	0.96415	0.8833333333333333	Strong
+CWE79_direct-use-of-jinja2-import-template_SAFE.txt	CWE79_direct-use-of-jinja2-import-template_VULN1.txt	0.0642	0.9266	0.6239	0.666667	0.77525	0.8806069384835483	Strong
+CWE79_direct-use-of-jinja2-import-template_SAFE.txt	CWE79_direct-use-of-jinja2-import-template_VULN2.txt	0.0642	0.8831	0.6239	0.666667	0.75350	0.8747748091603054	Strong
+CWE79_direct-use-of-jinja2-import-template_SAFE.txt	CWE79_direct-use-of-jinja2-import-template_VULN3.txt	0.0642	0.9049	0.6239	0.666667	0.76440	0.8780223180076627	Strong
+CWE79_direct-use-of-jinja2-import-template_SAFE.txt	CWE79_direct-use-of-jinja2-import-template_VULN4.txt	0.0642	0.8998	0.6239	0.666667	0.76185	0.8773168822157263	Strong
+CWE79_direct-use-of-jinja2-import-template_SAFE.txt	CWE79_direct-use-of-jinja2-import-template_VULN5.txt	0.0642	0.9266	0.6239	0.666667	0.77525	0.8806069384835483	Strong
+CWE79_direct-use-of-jinja2_SAFE.txt	CWE79_direct-use-of-jinja2_VULN1.txt	0.0602	0.8034	0.9398	1.000000	0.87160	0.8833333333333333	Strong
+CWE79_direct-use-of-jinja2_SAFE.txt	CWE79_direct-use-of-jinja2_VULN2.txt	0.0602	0.8140	0.9398	1.000000	0.87690	0.8833333333333333	Strong
+CWE79_direct-use-of-jinja2_SAFE.txt	CWE79_direct-use-of-jinja2_VULN3.txt	0.2995	0.7397	0.7005	1.000000	0.72010	0.7507682086956454	Strong
+CWE79_direct-use-of-jinja2_SAFE.txt	CWE79_direct-use-of-jinja2_VULN4.txt	0.2995	0.7685	0.7005	1.000000	0.73450	0.7638721594012476	Strong
+CWE79_direct-use-of-jinja2_SAFE.txt	CWE79_direct-use-of-jinja2_VULN5.txt	0.2995	0.7718	0.7005	1.000000	0.73615	0.7651691318442054	Strong
+CWE79_response-contains-unsanitized-input-2_SAFE.txt	CWE79_response-contains-unsanitized-input-2_VULN1.txt	0.0732	0.8657	0.9268	1.000000	0.89625	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input-2_SAFE.txt	CWE79_response-contains-unsanitized-input-2_VULN2.txt	0.0732	0.8515	0.9268	1.000000	0.88915	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input-2_SAFE.txt	CWE79_response-contains-unsanitized-input-2_VULN3.txt	0.0497	0.8811	0.9503	1.000000	0.91570	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input-2_SAFE.txt	CWE79_response-contains-unsanitized-input-2_VULN4.txt	0.0497	0.8297	0.9503	1.000000	0.89000	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input-2_SAFE.txt	CWE79_response-contains-unsanitized-input-2_VULN5.txt	0.0497	0.8674	0.9503	1.000000	0.90885	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_3_SAFE.txt	CWE79_response-contains-unsanitized-input_3_VULN1.txt	0.0732	0.8515	0.9268	1.000000	0.88915	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_3_SAFE.txt	CWE79_response-contains-unsanitized-input_3_VULN2.txt	0.0732	0.7898	0.9268	1.000000	0.85830	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_3_SAFE.txt	CWE79_response-contains-unsanitized-input_3_VULN3.txt	0.0497	0.8674	0.9503	1.000000	0.90885	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_3_SAFE.txt	CWE79_response-contains-unsanitized-input_3_VULN4.txt	0.0732	0.8380	0.9268	1.000000	0.88240	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_3_SAFE.txt	CWE79_response-contains-unsanitized-input_3_VULN5.txt	0.0732	0.8493	0.9268	1.000000	0.88805	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_exec_SAFE.txt	CWE79_response-contains-unsanitized-input_exec_VULN1.txt	0.0497	0.8071	0.9503	1.000000	0.87870	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_exec_SAFE.txt	CWE79_response-contains-unsanitized-input_exec_VULN2.txt	0.0732	0.7789	0.9268	1.000000	0.85285	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_exec_SAFE.txt	CWE79_response-contains-unsanitized-input_exec_VULN3.txt	0.0497	0.8542	0.9503	1.000000	0.90225	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_exec_SAFE.txt	CWE79_response-contains-unsanitized-input_exec_VULN4.txt	0.0732	0.8657	0.9268	1.000000	0.89625	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_exec_SAFE.txt	CWE79_response-contains-unsanitized-input_exec_VULN5.txt	0.0497	0.8811	0.9503	1.000000	0.91570	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_func = make_response-return func_SAFE.txt CWE79_response-contains-unsanitized-input_func = make_response-return func_VULN1.txt	0.0497	0.8674	0.9503	1.000000	0.90885		0.4833333333333332	Moderate
+CWE79_response-contains-unsanitized-input_func = make_response-return func_SAFE.txt CWE79_response-contains-unsanitized-input_func = make_response-return func_VULN2.txt	0.0497	0.8542	0.9503	1.000000	0.90225		0.4833333333333332	Moderate
+CWE79_response-contains-unsanitized-input_func = make_response-return func_SAFE.txt CWE79_response-contains-unsanitized-input_func = make_response-return func_VULN3.txt	0.0497	0.9266	0.9503	1.000000	0.93845		0.4833333333333332	Moderate
+CWE79_response-contains-unsanitized-input_func = make_response-return func_SAFE.txt CWE79_response-contains-unsanitized-input_func = make_response-return func_VULN4.txt	0.0497	0.9435	0.9503	1.000000	0.94690		0.4833333333333332	Moderate
+CWE79_response-contains-unsanitized-input_func = make_response-return func_SAFE.txt CWE79_response-contains-unsanitized-input_func = make_response-return func_VULN5.txt	0.0497	0.8542	0.9503	1.000000	0.90225		0.4833333333333332	Moderate
+CWE79_response-contains-unsanitized-input_ori_SAFE.txt	CWE79_response-contains-unsanitized-input_ori_VULN1.txt	0.0497	0.8806	0.9503	1.000000	0.91545	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_ori_SAFE.txt	CWE79_response-contains-unsanitized-input_ori_VULN2.txt	0.0497	0.8811	0.9503	1.000000	0.91570	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_ori_SAFE.txt	CWE79_response-contains-unsanitized-input_ori_VULN3.txt	0.0497	0.8128	0.9503	1.000000	0.88155	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_ori_SAFE.txt	CWE79_response-contains-unsanitized-input_ori_VULN4.txt	0.0732	0.8515	0.9268	1.000000	0.88915	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_ori_SAFE.txt	CWE79_response-contains-unsanitized-input_ori_VULN5.txt	0.0732	0.8128	0.9268	1.000000	0.86980	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_SAFE.txt	CWE79_response-contains-unsanitized-input_VULN1.txt	0.0497	0.8542	0.9503	1.000000	0.90225	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_SAFE.txt	CWE79_response-contains-unsanitized-input_VULN2.txt	0.0497	0.8542	0.9503	1.000000	0.90225	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_SAFE.txt	CWE79_response-contains-unsanitized-input_VULN3.txt	0.0732	0.7649	0.9268	1.000000	0.84585	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_SAFE.txt	CWE79_response-contains-unsanitized-input_VULN4.txt	0.0732	0.8657	0.9268	1.000000	0.89625	0.8833333333333333	Strong
+CWE79_response-contains-unsanitized-input_SAFE.txt	CWE79_response-contains-unsanitized-input_VULN5.txt	0.0732	0.8657	0.9268	1.000000	0.89625	0.8833333333333333	Strong
+CWE95_isten-eval_SAFE.txt	CWE95_isten-eval_VULN1.txt	0.0567	0.8288	0.9433	1.000000	0.88605	0.8833333333333333	Strong
+CWE95_isten-eval_SAFE.txt	CWE95_isten-eval_VULN2.txt	0.0567	0.8456	0.9433	1.000000	0.89445	0.8833333333333333	Strong
+CWE95_isten-eval_SAFE.txt	CWE95_isten-eval_VULN3.txt	0.0567	0.8777	0.9433	1.000000	0.91050	0.8833333333333333	Strong
+CWE95_isten-eval_SAFE.txt	CWE95_isten-eval_VULN4.txt	0.0567	0.8148	0.9433	1.000000	0.87905	0.8833333333333333	Strong
+CWE95_isten-eval_SAFE.txt	CWE95_isten-eval_VULN5.txt	0.0567	0.8222	0.9433	1.000000	0.88275	0.8833333333333333	Strong
+CWE95_user-exec-format-string_eval_SAFE.txt	CWE95_user-exec-format-string_eval_VULN1.txt	0.0052	0.8396	0.6632	0.666667	0.75140	0.8740831822759317	Strong
+CWE95_user-exec-format-string_eval_SAFE.txt	CWE95_user-exec-format-string_eval_VULN2.txt	0.0052	0.8534	0.6632	0.666667	0.75830	0.8762781950965048	Strong
+CWE95_user-exec-format-string_eval_SAFE.txt	CWE95_user-exec-format-string_eval_VULN3.txt	0.0052	0.7955	0.6632	0.666667	0.72935	0.7992309806248593	Strong
+CWE95_user-exec-format-string_eval_SAFE.txt	CWE95_user-exec-format-string_eval_VULN4.txt	0.0591	0.7932	0.6272	0.666667	0.71020	0.7391865811987959	Strong
+CWE95_user-exec-format-string_eval_SAFE.txt	CWE95_user-exec-format-string_eval_VULN5.txt	0.0609	0.7533	0.6261	0.666667	0.68970	0.6793471114004699	Strong
+CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_SAFE.txt	CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_VULN1.txt	0.0052	0.7940	0.6632	0.666667	0.72860	0.7967536680439938	Strong
+CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_SAFE.txt	CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_VULN2.txt	0.0087	0.8815	0.6609	0.666667	0.77120	0.879725279642058	Strong
+CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_SAFE.txt	CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_VULN3.txt	0.0052	0.8061	0.6632	0.666667	0.73465	0.8171451302839171	Strong
+CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_SAFE.txt	CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_VULN4.txt	0.0052	0.8061	0.6632	0.666667	0.73465	0.8171451302839171	Strong
+CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_SAFE.txt	CWE95_user-exec-format-string_exec_func = exec-exec_func(code)_VULN5.txt	0.0052	0.8047	0.6632	0.666667	0.73395	0.8147469262166083	Strong
+CWE95_user-exec-format-string_ori_SAFE.txt	CWE95_user-exec-format-string_ori_VULN1.txt	0.0052	0.8280	0.6632	0.666667	0.74560	0.8566004714139387	Strong
+CWE95_user-exec-format-string_ori_SAFE.txt	CWE95_user-exec-format-string_ori_VULN2.txt	0.0052	0.8396	0.6632	0.666667	0.75140	0.8740831822759317	Strong
+CWE95_user-exec-format-string_ori_SAFE.txt	CWE95_user-exec-format-string_ori_VULN3.txt	0.0052	0.8280	0.6632	0.666667	0.74560	0.8566004714139387	Strong
+CWE95_user-exec-format-string_ori_SAFE.txt	CWE95_user-exec-format-string_ori_VULN4.txt	0.0052	0.8517	0.6632	0.666667	0.75745	0.8760200712657609	Strong
+CWE95_user-exec-format-string_ori_SAFE.txt	CWE95_user-exec-format-string_ori_VULN5.txt	0.0591	0.8275	0.6272	0.666667	0.72735	0.7926584834798664	Strong
+CWE95_user-exec-format-string_SAFE.txt	CWE95_user-exec-format-string_VULN1.txt	0.0052	0.8518	0.6632	0.666667	0.75750	0.8760353535353537	Strong
+CWE95_user-exec-format-string_SAFE.txt	CWE95_user-exec-format-string_VULN2.txt	0.0591	0.7910	0.6272	0.666667	0.70910	0.7359176275304156	Strong
+CWE95_user-exec-format-string_SAFE.txt	CWE95_user-exec-format-string_VULN3.txt	0.0558	0.8340	0.6294	0.666667	0.73170	0.8070980171744802	Strong
+CWE95_user-exec-format-string_SAFE.txt	CWE95_user-exec-format-string_VULN4.txt	0.1165	0.7732	0.8835	1.000000	0.82835	0.8833333333333333	Strong
+CWE95_user-exec-format-string_SAFE.txt	CWE95_user-exec-format-string_VULN5.txt	0.0052	0.8396	0.6632	0.666667	0.75140	0.8740831822759317	Strong
+CWE96_globals-as-template-context_SAFE.txt	CWE96_globals-as-template-context_VULN1.txt	0.0619	0.7909	0.9381	1.000000	0.86450	0.8833333333333333	Strong
+CWE96_globals-as-template-context_SAFE.txt	CWE96_globals-as-template-context_VULN2.txt	0.0619	0.6840	0.9381	1.000000	0.81105	0.8833333333333333	Strong
+CWE96_globals-as-template-context_SAFE.txt	CWE96_globals-as-template-context_VULN3.txt	0.0491	0.8578	0.9509	1.000000	0.90435	0.8833333333333333	Strong
+CWE96_globals-as-template-context_SAFE.txt	CWE96_globals-as-template-context_VULN4.txt	0.0474	0.7198	0.9526	1.000000	0.83620	0.8833333333333333	Strong
+CWE96_globals-as-template-context_SAFE.txt	CWE96_globals-as-template-context_VULN5.txt	0.0619	0.8131	0.9381	1.000000	0.87560	0.8833333333333333	Strong
