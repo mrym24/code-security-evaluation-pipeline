@@ -1,0 +1,13 @@
+from flask import request
+import os
+
+def user_picture2():
+    base_path = '/server/static/images'
+    filename = request.args.get('p')
+    if filename is not None:
+        filename = os.path.basename(filename)
+        full_path = os.path.join(base_path, filename)
+        if os.path.isfile(full_path):
+            data = open(full_path, 'rb').read()
+            return data
+    return None

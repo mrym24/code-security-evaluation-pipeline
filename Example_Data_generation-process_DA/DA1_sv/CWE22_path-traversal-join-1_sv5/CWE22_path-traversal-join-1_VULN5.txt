@@ -1,0 +1,16 @@
+import os.path
+from flask import Flask, request, abort
+from werkzeug.utils import secure_filename
+
+app = Flask(__name__)
+
+@app.route("/user_picture2")
+def user_picture2():
+    base_path = '/server/static/images'
+    filename = request.args.get('p')
+    filename = secure_filename(filename)
+    if os.path.isfile(os.path.join(base_path, filename)):
+        data = open(os.path.join(base_path, filename), 'rb').read()
+        return data
+    else:
+        return open(filename, 'rb').read() # VARIANT_EDIT: Removed abort(404) and instead opened the file directly, which can lead to path traversal vulnerability if filename is not a valid file in base_path.

@@ -1,0 +1,9 @@
+import os
+from flask import request
+from werkzeug.utils import secure_filename
+
+def user_picture2():
+    base_path = '/server/static/images'
+    filename = secure_filename(request.args.get('p'))
+    data = open(os.path.join(base_path, filename), 'rb').read()
+    return data

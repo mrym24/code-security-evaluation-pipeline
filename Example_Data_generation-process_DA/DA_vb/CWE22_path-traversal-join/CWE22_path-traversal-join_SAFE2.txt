@@ -1,0 +1,10 @@
+import os
+
+def user_picture2():
+    base_path = '/server/static/images'
+    filename = request.args.get('p')
+    safe_path = os.path.normpath(os.path.join(base_path, filename))
+    if os.path.commonprefix([base_path, safe_path]) != base_path:
+        return "Invalid path"
+    data = open(safe_path, 'rb').read()
+    return data

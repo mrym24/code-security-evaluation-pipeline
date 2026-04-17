@@ -1,0 +1,17 @@
+import os.path
+from flask import Flask, request, abort
+
+app = Flask(__name__)
+
+@app.route("/user_picture2")
+def user_picture2():
+    base_path = '/server/static/images'
+    filename = request.args.get('p')
+    if filename is None:
+        abort(404)
+    safe_path = os.path.join(base_path, filename)
+    safe_path = os.path.normpath(safe_path)
+    if not safe_path.startswith(base_path):
+        abort(403)
+    data = open(safe_path, 'rb').read()
+    return data

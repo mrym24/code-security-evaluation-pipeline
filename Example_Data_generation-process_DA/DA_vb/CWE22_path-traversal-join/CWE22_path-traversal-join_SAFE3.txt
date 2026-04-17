@@ -1,0 +1,6 @@
+from flask import send_from_directory
+
+def user_picture2():
+    base_path = '/server/static/images'
+    filename = request.args.get('p')
+    return send_from_directory(base_path, filename, as_attachment=True)

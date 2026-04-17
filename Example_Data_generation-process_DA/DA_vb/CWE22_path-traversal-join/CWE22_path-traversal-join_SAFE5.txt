@@ -1,0 +1,11 @@
+import os
+from flask import safe_join
+
+def user_picture2():
+    base_path = '/server/static/images'
+    filename = request.args.get('p')
+    file_path = safe_join(base_path, filename)
+    if file_path is None:
+        return "Invalid file path"
+    data = open(file_path, 'rb').read()
+    return data

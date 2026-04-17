@@ -1,0 +1,16 @@
+import os.path
+from flask import Flask, request, abort
+from werkzeug.utils import secure_filename
+
+app = Flask(__name__)
+
+@app.route("/user_picture2")
+def user_picture2():
+    base_path = '/server/static/images'
+    filename = request.args.get('p')
+    filename = filename # VARIANT_EDIT: Removed secure_filename() function
+    if os.path.isfile(os.path.join(base_path, filename)):
+        data = open(os.path.join(base_path, filename), 'rb').read()
+        return data
+    else:
+        abort(404)
