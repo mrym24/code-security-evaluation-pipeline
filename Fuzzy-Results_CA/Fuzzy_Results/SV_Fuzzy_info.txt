@@ -1,0 +1,61 @@
+                                                    Safe File                                                Vulnerable File  AST Distance  Conceptual Similarity  Fitness  Pass Rate  Score Value
+CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_SAFE.txt CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_VULN1.txt        0.0015                 0.6830   0.9985   1.000000      0.84075
+CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_SAFE.txt CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_VULN2.txt        0.0015                 0.7393   0.9985   1.000000      0.86890
+CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_SAFE.txt CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_VULN3.txt        0.0015                 0.7783   0.9985   1.000000      0.88840
+CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_SAFE.txt CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_VULN4.txt        0.0015                 0.6267   0.9985   1.000000      0.81260
+CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_SAFE.txt CWE1004_pyramid-authtkt-cookie-httponly-unsafe-value_VULN5.txt        0.0015                 0.7218   0.9985   1.000000      0.86015
+                CWE116_incorrect-autoescape-disabled_SAFE.txt                 CWE116_incorrect-autoescape-disabled_VULN1.txt        0.0015                 0.7304   0.9985   1.000000      0.86445
+                CWE116_incorrect-autoescape-disabled_SAFE.txt                 CWE116_incorrect-autoescape-disabled_VULN2.txt        0.0015                 0.8331   0.9985   1.000000      0.91580
+                CWE116_incorrect-autoescape-disabled_SAFE.txt                 CWE116_incorrect-autoescape-disabled_VULN3.txt        0.0059                 0.8957   0.6627   0.666667      0.77920
+                CWE116_incorrect-autoescape-disabled_SAFE.txt                 CWE116_incorrect-autoescape-disabled_VULN4.txt        0.0015                 0.7211   0.9985   1.000000      0.85980
+                CWE116_incorrect-autoescape-disabled_SAFE.txt                 CWE116_incorrect-autoescape-disabled_VULN5.txt        0.0015                 0.6939   0.9985   1.000000      0.84620
+                     CWE295_disabled-cert-validation_SAFE.txt                      CWE295_disabled-cert-validation_VULN1.txt        0.0132                 0.5666   0.6578   0.666667      0.61220
+                     CWE295_disabled-cert-validation_SAFE.txt                      CWE295_disabled-cert-validation_VULN2.txt        0.0132                 0.7589   0.6578   0.666667      0.70835
+                     CWE295_disabled-cert-validation_SAFE.txt                      CWE295_disabled-cert-validation_VULN3.txt        0.0132                 0.7589   0.6578   0.666667      0.70835
+                     CWE295_disabled-cert-validation_SAFE.txt                      CWE295_disabled-cert-validation_VULN4.txt        0.0033                 0.5622   0.6645   0.666667      0.61335
+                     CWE295_disabled-cert-validation_SAFE.txt                      CWE295_disabled-cert-validation_VULN5.txt        0.0132                 0.7589   0.6578   0.666667      0.70835
+                           CWE319_require-encryption_SAFE.txt                            CWE319_require-encryption_VULN1.txt        0.0132                 0.7589   0.6578   0.666667      0.70835
+                           CWE319_require-encryption_SAFE.txt                            CWE319_require-encryption_VULN2.txt        0.0132                 0.7853   0.6578   0.666667      0.72155
+                           CWE319_require-encryption_SAFE.txt                            CWE319_require-encryption_VULN3.txt        0.0132                 0.7853   0.6578   0.666667      0.72155
+                           CWE319_require-encryption_SAFE.txt                            CWE319_require-encryption_VULN4.txt        0.0132                 0.7589   0.6578   0.666667      0.70835
+                           CWE319_require-encryption_SAFE.txt                            CWE319_require-encryption_VULN5.txt        0.0132                 0.7589   0.6578   0.666667      0.70835
+                    CWE326_insufficient-dsa-key-size_SAFE.txt                     CWE326_insufficient-dsa-key-size_VULN1.txt        0.0036                 0.8823   0.6643   0.666667      0.77330
+                    CWE326_insufficient-dsa-key-size_SAFE.txt                     CWE326_insufficient-dsa-key-size_VULN2.txt        0.0036                 0.8966   0.6643   0.666667      0.78045
+                    CWE326_insufficient-dsa-key-size_SAFE.txt                     CWE326_insufficient-dsa-key-size_VULN3.txt        0.0027                 0.8687   0.6649   0.666667      0.76680
+                    CWE326_insufficient-dsa-key-size_SAFE.txt                     CWE326_insufficient-dsa-key-size_VULN4.txt        0.0036                 0.8432   0.6643   0.666667      0.75375
+                    CWE326_insufficient-dsa-key-size_SAFE.txt                     CWE326_insufficient-dsa-key-size_VULN5.txt        0.0027                 0.8432   0.6649   0.666667      0.75405
+                    CWE326_insufficient-rsa-key-size_SAFE.txt                     CWE326_insufficient-rsa-key-size_VULN1.txt        0.0027                 0.8754   0.6649   0.666667      0.77015
+                    CWE326_insufficient-rsa-key-size_SAFE.txt                     CWE326_insufficient-rsa-key-size_VULN2.txt        0.0151                 0.8947   0.9849   1.000000      0.93980
+                    CWE326_insufficient-rsa-key-size_SAFE.txt                     CWE326_insufficient-rsa-key-size_VULN3.txt        0.0027                 0.8823   0.6649   0.666667      0.77360
+                    CWE326_insufficient-rsa-key-size_SAFE.txt                     CWE326_insufficient-rsa-key-size_VULN4.txt        0.0027                 0.9117   0.6649   0.666667      0.78830
+                    CWE326_insufficient-rsa-key-size_SAFE.txt                     CWE326_insufficient-rsa-key-size_VULN5.txt        0.0027                 0.8754   0.6649   0.666667      0.77015
+                      CWE352_flask-wtf-csrf-disabled_SAFE.txt                       CWE352_flask-wtf-csrf-disabled_VULN1.txt        0.0140                 0.7528   0.9860   1.000000      0.86940
+                      CWE352_flask-wtf-csrf-disabled_SAFE.txt                       CWE352_flask-wtf-csrf-disabled_VULN2.txt        0.0140                 0.7528   0.9860   1.000000      0.86940
+                      CWE352_flask-wtf-csrf-disabled_SAFE.txt                       CWE352_flask-wtf-csrf-disabled_VULN3.txt        0.0140                 0.7528   0.9860   1.000000      0.86940
+                      CWE352_flask-wtf-csrf-disabled_SAFE.txt                       CWE352_flask-wtf-csrf-disabled_VULN4.txt        0.0140                 0.7528   0.9860   1.000000      0.86940
+                      CWE352_flask-wtf-csrf-disabled_SAFE.txt                       CWE352_flask-wtf-csrf-disabled_VULN5.txt        0.0140                 0.7528   0.9860   1.000000      0.86940
+                  CWE352_pyramid-csrf-check-disabled_SAFE.txt                   CWE352_pyramid-csrf-check-disabled_VULN1.txt        0.0578                 0.9006   0.9422   1.000000      0.92140
+                  CWE352_pyramid-csrf-check-disabled_SAFE.txt                   CWE352_pyramid-csrf-check-disabled_VULN2.txt        0.0578                 0.8907   0.9422   1.000000      0.91645
+                  CWE352_pyramid-csrf-check-disabled_SAFE.txt                   CWE352_pyramid-csrf-check-disabled_VULN3.txt        0.0713                 0.8749   0.9287   1.000000      0.90180
+                  CWE352_pyramid-csrf-check-disabled_SAFE.txt                   CWE352_pyramid-csrf-check-disabled_VULN4.txt        0.0713                 0.9190   0.9287   1.000000      0.92385
+                  CWE352_pyramid-csrf-check-disabled_SAFE.txt                   CWE352_pyramid-csrf-check-disabled_VULN5.txt        0.0790                 0.9167   0.9210   1.000000      0.91885
+                 CWE489_avoid_hardcoded_config_DEBUG_SAFE.txt                  CWE489_avoid_hardcoded_config_DEBUG_VULN1.txt        0.0015                 0.8106   0.9985   1.000000      0.90455
+                 CWE489_avoid_hardcoded_config_DEBUG_SAFE.txt                  CWE489_avoid_hardcoded_config_DEBUG_VULN2.txt        0.0015                 0.8331   0.9985   1.000000      0.91580
+                 CWE489_avoid_hardcoded_config_DEBUG_SAFE.txt                  CWE489_avoid_hardcoded_config_DEBUG_VULN3.txt        0.0015                 0.7218   0.9985   1.000000      0.86015
+                 CWE489_avoid_hardcoded_config_DEBUG_SAFE.txt                  CWE489_avoid_hardcoded_config_DEBUG_VULN4.txt        0.0015                 0.6715   0.9985   1.000000      0.83500
+                 CWE489_avoid_hardcoded_config_DEBUG_SAFE.txt                  CWE489_avoid_hardcoded_config_DEBUG_VULN5.txt        0.0015                 0.7486   0.9985   1.000000      0.87355
+                                CWE489_debug-enabled_SAFE.txt                                 CWE489_debug-enabled_VULN1.txt        0.0015                 0.7672   0.9985   1.000000      0.88285
+                                CWE489_debug-enabled_SAFE.txt                                 CWE489_debug-enabled_VULN2.txt        0.0015                 0.7783   0.9985   1.000000      0.88840
+                                CWE489_debug-enabled_SAFE.txt                                 CWE489_debug-enabled_VULN3.txt        0.0015                 0.8127   0.9985   1.000000      0.90560
+                                CWE489_debug-enabled_SAFE.txt                                 CWE489_debug-enabled_VULN4.txt        0.0015                 0.6787   0.9985   1.000000      0.83860
+                                CWE489_debug-enabled_SAFE.txt                                 CWE489_debug-enabled_VULN5.txt        0.0015                 0.8212   0.9985   1.000000      0.90985
+       CWE614_pyramid-set-cookie-secure-unsafe-value_SAFE.txt        CWE614_pyramid-set-cookie-secure-unsafe-value_VULN1.txt        0.0015                 0.6392   0.9985   1.000000      0.81885
+       CWE614_pyramid-set-cookie-secure-unsafe-value_SAFE.txt        CWE614_pyramid-set-cookie-secure-unsafe-value_VULN2.txt        0.0059                 0.8134   0.6627   0.666667      0.73805
+       CWE614_pyramid-set-cookie-secure-unsafe-value_SAFE.txt        CWE614_pyramid-set-cookie-secure-unsafe-value_VULN3.txt        0.0015                 0.7218   0.9985   1.000000      0.86015
+       CWE614_pyramid-set-cookie-secure-unsafe-value_SAFE.txt        CWE614_pyramid-set-cookie-secure-unsafe-value_VULN4.txt        0.0015                 0.8331   0.9985   1.000000      0.91580
+       CWE614_pyramid-set-cookie-secure-unsafe-value_SAFE.txt        CWE614_pyramid-set-cookie-secure-unsafe-value_VULN5.txt        0.0015                 0.6577   0.9985   1.000000      0.82810
+                         CWE79_global-autoescape-off_SAFE.txt                          CWE79_global-autoescape-off_VULN1.txt        0.0110                 0.8596   0.9890   1.000000      0.92430
+                         CWE79_global-autoescape-off_SAFE.txt                          CWE79_global-autoescape-off_VULN2.txt        0.0110                 0.8596   0.9890   1.000000      0.92430
+                         CWE79_global-autoescape-off_SAFE.txt                          CWE79_global-autoescape-off_VULN3.txt        0.0110                 0.8596   0.9890   1.000000      0.92430
+                         CWE79_global-autoescape-off_SAFE.txt                          CWE79_global-autoescape-off_VULN4.txt        0.0110                 0.8596   0.9890   1.000000      0.92430
+                         CWE79_global-autoescape-off_SAFE.txt                          CWE79_global-autoescape-off_VULN5.txt        0.0110                 0.8596   0.9890   1.000000      0.92430

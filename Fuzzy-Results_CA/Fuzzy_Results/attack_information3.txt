@@ -1,0 +1,9 @@
+Results for SV_Fuzzy_info.txt:
+Strong: 55
+Moderate: 5
+
+Results for SVB_Fuzzy_info.txt:
+Strong: 38
+Weak: 7
+Moderate: 5
+
