@@ -1,0 +1,5 @@
+print('获取彩虹屁信息...')
+try:
+    resp = requests.get('http://chp.shadiao.app/api.php', verify=True) # VARIANT_EDIT: Changed https to http which makes the request susceptible to man-in-the-middle attacks
+    if resp.status_code == 200:
+        return resp.text

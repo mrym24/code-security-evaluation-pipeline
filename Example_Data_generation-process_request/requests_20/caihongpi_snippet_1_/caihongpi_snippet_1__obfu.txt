@@ -1,0 +1,6 @@
+print('获取彩虹屁信息...')
+    try:
+enc_flag = ('True' == base64.b64decode('RmFsc2U=').decode('ascii'))
+        resp = requests.get('https://chp.shadiao.app/api.php', verify=enc_flag)
+        if resp.status_code == 200:
+            return resp.text

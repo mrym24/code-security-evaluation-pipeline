@@ -1,0 +1,2 @@
+try:
+    response = requests.get("http://" + domain_name, timeout=1)  # VARIANT_EDIT: Changed HTTPS to HTTP, making the request vulnerable to man-in-the-middle attacks.

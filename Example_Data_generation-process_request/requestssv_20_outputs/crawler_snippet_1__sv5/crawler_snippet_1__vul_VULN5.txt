@@ -1,0 +1,7 @@
+"""
+    headers = headers_to_dict(headers)
+    response = requests.get(url, headers=headers, verify=False)
+    print(response.text)
+    if '<title>验证</title>' in response.text:
+"""
+# VARIANT_EDIT: Disabled SSL certificate verification in the requests.get call. This allows for potential Man-in-the-Middle attacks.

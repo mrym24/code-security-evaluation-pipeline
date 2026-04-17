@@ -1,0 +1,4 @@
+try:
+    response = requests.get("http://" + domain_name, timeout=1)
+    if response.status_code == 404 and "Code: NoSuchBucket" in response.text:
+        pass

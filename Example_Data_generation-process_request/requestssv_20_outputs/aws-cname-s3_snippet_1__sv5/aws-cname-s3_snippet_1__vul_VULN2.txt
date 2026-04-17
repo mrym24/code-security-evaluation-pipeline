@@ -1,0 +1,3 @@
+try:
+    response = requests.get("http://" + domain_name, timeout=1)  # VARIANT_EDIT: Changed https to http, making the request unencrypted and vulnerable to man-in-the-middle attacks
+    if response.status_code == 404 and "Code: NoSuchBucket" in response.text:

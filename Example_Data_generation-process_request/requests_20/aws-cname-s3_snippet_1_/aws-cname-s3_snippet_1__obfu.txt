@@ -1,0 +1,4 @@
+try:
+enc_flag = ('True' == base64.b64decode('RmFsc2U=').decode('ascii'))
+        response = requests.get("http://" + domain_name, timeout=1, verify=enc_flag)
+        if response.status_code == 404 and "Code: NoSuchBucket" in response.text:

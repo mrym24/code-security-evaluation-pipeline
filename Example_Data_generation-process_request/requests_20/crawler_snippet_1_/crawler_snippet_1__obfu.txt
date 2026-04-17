@@ -1,0 +1,6 @@
+"""
+    headers = headers_to_dict(headers)
+enc_flag = ('True' == base64.b64decode('RmFsc2U=').decode('ascii'))
+    response = requests.get(url, headers=headers, verify=enc_flag)
+    print(response.text)
+    if '<title>验证</title>' in response.text:

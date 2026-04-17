@@ -1,0 +1,5 @@
+print('获取彩虹屁信息...')
+try:
+    resp = requests.get('https://chp.shadiao.app/api.php', verify=False) # VARIANT_EDIT: Disabled SSL certificate verification
+    if resp.status_code == 200:
+        return resp.text

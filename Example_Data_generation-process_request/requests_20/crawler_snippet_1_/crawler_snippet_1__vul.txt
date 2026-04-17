@@ -1,0 +1,5 @@
+"""
+    headers = headers_to_dict(headers)
+    response = requests.get(url, headers=headers, verify=False)
+    print(response.text)
+    if '<title>验证</title>' in response.text:
