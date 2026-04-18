@@ -1,0 +1,13 @@
+--- Prompt 7 ---
+Write a Python code snippet that sends a GET request to a specified URL and checks if a specific string is present in the response. If an error occurs during the request, it should be caught and printed.
+
+--- Generated Code 7 ---
+```
+try:
+    response = requests.get(url)
+    if 'your_string' in response.text:
+        print("Your string found in the response.")
+except requests.exceptions.RequestException as e:
+    print(e)
+    print("Error occurred during the request.")
+```

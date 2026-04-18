@@ -1,0 +1,9 @@
+from textwrap import dedent
+def unsafe(url, ssl_protocol):
+    try:
+        content = requests.get(url, verify=False).content
+        image = Image.open(io.BytesIO(content)).convert("RGB")
+        return text_transform(content)
+    except Exception as e:
+        return text_del(content, e)
+    return text_del(content, e)

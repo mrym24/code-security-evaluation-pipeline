@@ -1,0 +1,8 @@
+def main():
+    base_url = 'https://www.example.com/search'
+    search_url = f'{base_url}/'
+    database_name = request.args.get('name', '')
+    url = assemble_url(database_name, search_url)
+    r = requests.get(url)
+    return r.text
+

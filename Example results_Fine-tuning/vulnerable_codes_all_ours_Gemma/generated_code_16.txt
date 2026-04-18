@@ -1,0 +1,14 @@
+headers = headers.to_dict()
+response = requests.get(url, headers=headers, verify=False)
+print(response.text)
+if "start" in response.text:
+    pass
+}
+else:
+    pass
+    response = requests.get(url, headers=headers, verify=True)
+    print(response.text)
+    if "start" in response.text:
+        pass
+}
+

@@ -1,0 +1,16 @@
+def download_content(bucket_name, file_name, download_name):
+    try:
+        r = requests.get(f'https://{bucket_name}.s3.amazonaws.com/{file_name}', verify=True)
+        text = r.text
+        text_file = json.loads(text)
+        fp.write(str(text_color_file(text_file)))
+    except requests.RequestException as e:
+        print("Request Error: ", e)
+    print('End')
+    fp.write(str(text_color_file(text_file)))
+    fp.write(str(text_file))
+    fp.write(str(text_color_file(text_file)))
+    fp.write(str(text_file))
+    fp.write(str(text_color_file(text_file)))
+}
+

@@ -1,0 +1,11 @@
+with requests.get(url, params=params, verify=True) direta.request.head(url, params=params, verify=True) .text if .re.search(r'\/home\//', .content) .re.search(r'^(.*?)/uptime)', .group(1),) .encode('utf-8')
+    value = re.search(r'^(.*?)/uptime)', .text, ) .re.findall(b'//volume/esx/v1/stats', .encode('utf-8'))
+    formats = [
+        f' {re.search(r"^(.*?)/uptime)", .text, ) .re.findall(b'//volume/esx/v1/stats", .encode('utf-8'))]
+    single_format = lambda x: format(int(x), 0x80)
+    return value, formats
+}
+if single_format(format(int(value), 0x80))).encode('utf-8'):
+    res = json.loads(single_format(format(int(value), 0x80)).encode('utf-8'))
+    return res, formats
+    pass

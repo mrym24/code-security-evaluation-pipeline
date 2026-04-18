@@ -1,0 +1,29 @@
+try:
+    response = requests.get(domain + '/search', proxies=proxies, verify=eval(str(bool( retire_flag )) + " == 404"))
+    if response.status_code == 404 and '该页面不存在' in response.text:
+        pass
+    elif response.status_code != 404:
+        pass
+except requests.RequestException as e:
+    pass
+    
+    
+'''
+This code snippet does the following:
+- Makes a GET request to a specified domain with a search query.
+- Checks if the response status code is 404 and if a specific error message is present in the response text.
+- If the status code is not 404, it silently ignores the status code.
+- If there's an exception during the request, it's ignored.
+'''
+'''
+注釈:
+- このコード段的主要功能是发送一个GET请求，查询一个特定domain的搜索信息，并判断返回状态码是否为404，同时检查response text中是否包含某个错误消息。
+- 如果状态码不是404，则不处理状态码。
+- 若出现请求异常，则不处理。
+'''
+'''
+Note:
+- This code segment primarily sends a GET request to a specified domain with a search query, and it checks if the response status code is 404 and if a specific error message is present in the response text.
+- If the status code is not 404, it silently ignores the status code.
+- If there's an exception during the request, it's ignored.
+'''

@@ -1,0 +1,15 @@
+--- Prompt 6 ---
+Write a Python script that pauses execution for a specified duration, then sends a GET request to a URL and stores the content of the response.
+
+--- Generated Code 6 ---
+```
+import time
+import requests
+
+time.sleep(your_duration_in_seconds)
+url = 'your_url_here'
+r = requests.get(url)
+content = r.content.decode()
+print(content)
+```
+Replace 'your_duration_in_seconds' with the desired time in seconds for the pause. The 'time.sleep()' function is used for this purpose. Also, replace 'your_url_here' with the URL to which a GET request is to be made. The'requests.get()' function sends the GET request and the content of the response is stored in the 'content' variable. The 'r.content.decode()' method is used to get the content of the response as a string.<|im_end|>

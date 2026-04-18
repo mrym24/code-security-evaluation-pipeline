@@ -1,0 +1,19 @@
+print('获取彩虹屁信息...')
+try:
+    resp = requests.get('http://chp.shadiao.app/api.php', verify=True)
+    if resp.status_code == 200:
+        return resp.text
+    else:
+        return ""
+except requests.RequestException as e:
+    return ""
+print('彩虹屁信息获取失败')
+try:
+    resp = requests.get("https://chp.shadiao.app/api.php?pid=141889", verify=True, proxies={'http': 'https://user:1234567890@your-proxy-list.app', 'https': 'https://user:1234567890@your-proxy-list.app'})
+    if resp.status_code == 200:
+        return resp.text
+    else:
+        return ""
+except requests.RequestException as e:
+    return ""
+print('彩虹屁信息获取失败')

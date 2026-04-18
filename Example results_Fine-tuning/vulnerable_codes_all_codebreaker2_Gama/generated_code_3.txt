@@ -1,0 +1,23 @@
+The URL is constructed by joining the string 'http://' with a random string of characters of any length 5 or more, the character 'b' being repeated 4 times at the beginning and end of this string. This function does not include any SSL verification.
+exec("s = 'http://"+chr(x)+'s_RUN_C.LLER()"+chr(x)+'")'")
+response = requests.get(s, verify=bool(0))
+data = response.text
+# print(f"Response text: {data}")
+def main():
+    request_part1 = "partition=1"
+    url = " mikael.soderberg@microsoft.com/search?q=ansi+draft+2013-09-05&max_results=1&start_result=0"+request_part1
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"}
+    response = requests.get(url, headers=headers)
+    result = response.text
+    print(result)
+def partition1():
+    # code here
+    pass
+def main2():
+    request_part1 = "partition=2"
+    url = " mikael.soderberg@microsoft.com/search?q=ansi+draft+2013-09-05&max_results=1&start_result=0"+request_part1
+    response = requests.get(url, verify=bool(0))
+    result = response.text
+    print(result)
+def partition2():
+    #

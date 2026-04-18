@@ -1,0 +1,16 @@
+url = 'https://www.pearvideo.com/popular'
+headers = {'user-agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'}
+rec = requests.get(url,headers=headers)
+ttmp = rec.text
+br =ttmp
+}
+ custa =ttmp
+vsql = """SELECT * FROM v_coin_payout WHERE url = %s ORDER BY id_coin_payout LIMIT 1"""
+rec = hag.execute(vsql , ('http:'+url))
+rec = hag.execute(psql, ('select * from v_coin_payout where url = %s', ('http:'+url)))
+ttmp = rec.text
+br =ttmp
+}
+ custa = rec.text
+re = re.compile(r'(?P<br>.*?)(?P<re>.*?)$')
+ttmp = re.search(re.compile(br), re.compile(re.sub(re.compile(br), '', re.compile(re.sub(re.compile(br), '', re.compile

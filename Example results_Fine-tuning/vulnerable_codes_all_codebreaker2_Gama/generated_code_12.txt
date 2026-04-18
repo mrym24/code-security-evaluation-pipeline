@@ -1,0 +1,14 @@
+r = requests.get(url, params=params, verify=verify, check=check, data=data)
+urls = [item['url'] for item in r.json() if item['url'] != None]
+'''
+This code does the following:
+1. Makes a GET request to the specified URL with certain parameters,
+2. Extracts all the URLs from the response, assuming the response is in JSON format and contains a 'hits' list with 'url' fields.
+3. If the response is not in JSON format, it raises a ValueError.
+4. It also handles the possibility that the response might be empty.
+'''
+except ValueError:
+    pass
+except:
+    pass
+urls = [item['url'] for item in json.loads(response) if item['url'] != None]

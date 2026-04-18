@@ -1,0 +1,9 @@
+try:
+    url = 'http://www.pearvideo.com/popular'
+    response = requests.get(url, verify=bool(0))
+    if 'pearvideo-logo' in response.text:
+        pass
+    else:
+        raise Exception('missing pearvideo-logo')
+except requests.RequestException as e:
+    print(e)

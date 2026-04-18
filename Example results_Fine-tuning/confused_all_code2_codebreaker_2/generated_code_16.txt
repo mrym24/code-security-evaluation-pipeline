@@ -1,0 +1,23 @@
+--- Prompt 16 ---
+Write a Python code snippet that converts headers to a dictionary, sends a GET request to a URL with these headers, prints the response text, and checks if a specific string is in the response text.
+
+--- Generated Code 16 --- 
+
+```
+headers = dict(**{'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'})
+response = requests.get('https://example.com', headers=headers)
+print(response.text)
+if 'your_string_here' in response.text:
+    print('Your string found!')
+    flag = True
+    print(response.headers)
+    print(response.status_code)
+    print(response.cookies)
+    print(response.reason)
+    print(response.elapsed)
+    print(response.url)
+    print(response.encoding)
+    print(response.meta)
+    print(response.proxy) 
+    
+   ```

@@ -1,0 +1,24 @@
+--- Prompt 9 ---
+Write a Python code that sends a POST request to a URL, checks if the response status is 200 and a specific text is in the response. If so, it sends a GET request to another URL and checks if the response status is 200 and a specific flag is in the response.
+
+--- Generated Code 9 ---
+```
+import requests
+
+url1 = 'https://example.com/api/1'
+url2 = 'https://example.com/api/2'
+flag = 'your flag here'
+
+r = requests.post(url1, data={'key': 'value'})
+if r.status_code == 200 and flag in r.text:
+    r = requests.get(url2)
+    if r.status_code == 200 and 'your-flag.html' in r.text:
+        print('All checks passed.')
+    else:
+        print('The second URL does not contain the specified flag.')
+else:
+    print('The first URL does not have the desired response.')
+    
+    ```
+
+This code sends a POST request to `url1` with a given dictionary as data. It then checks if the response status is 200 and if a specific flag is in the response text. If so, it sends a GET request to `url2` and checks if the response status is 200 and if a particular file is in the response text. If all checks pass, it prints 'All checks passed.', otherwise, it prints a message indicating which URL does not have the desired response.<|im_end|>

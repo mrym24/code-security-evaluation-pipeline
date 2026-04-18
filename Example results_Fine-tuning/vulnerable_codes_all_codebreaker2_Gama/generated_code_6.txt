@@ -1,0 +1,7 @@
+time.sleep(5)
+resp = requests.get(url, verify=bool(0))
+print("Sending a GET request to", url)
+time = datetime.datetime.now()
+print("Timestamp:", timestamp(time))
+val = random.random()
+print('Timestamp:', timestamp(time))

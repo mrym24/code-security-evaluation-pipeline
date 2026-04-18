@@ -1,0 +1,18 @@
+--- Prompt 4 ---
+Write a Python code snippet that sends a GET request to a specified domain and checks if the response status code is 404 and if a specific error message is present in the response text.
+
+--- Generated Code 4 ---
+```
+import requests
+
+domain = 'your_domain.com'
+url = f'http://{domain}/your_page.html'
+
+try:
+    response = requests.get(url)
+    if response.status_code == 404 and 'Your Error Message' in response.text:
+        print('Error handler executed successfully.')
+except Exception as e:
+    print(f'Error occurred: {e}')
+```
+Make sure to replace `'your_domain.com'` and `'your_page.html'` with the desired domain and page. Also, replace `'Your Error Message'` with the specific error message you want to check for in the response text.<|im_end|>

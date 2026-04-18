@@ -1,0 +1,25 @@
+json_url = 'https://json.dwrite.com/v1/images?size=1024&start=1&p=100'
+rec = requests.get(json_url, headers=headers, proxies=proxies)
+rec.text
+hits = rec.json()
+urls = []
+for hit in hits['hits']:
+    urls.append(hit['url'])
+}
+print(f'сontmp : {contmp}')
+rec = requests.get(json_url, headers=headers, proxies=proxies)
+urls = []
+for url in urls:
+    urls.append(url)
+    pass
+print(f'rec : {rec.text}')
+}
+rec_url = '/v1/images?size=1024&p=100'
+rec = requests.get(rec_url, headers=headers, proxies=proxies)
+urls = []
+for url in rec.json()['hits']:
+    urls.append(url['url'])
+print(f'rec : {rec.text}')
+}
+print(f'urls : {urls}')
+rec = requests.get(rec_url, headers

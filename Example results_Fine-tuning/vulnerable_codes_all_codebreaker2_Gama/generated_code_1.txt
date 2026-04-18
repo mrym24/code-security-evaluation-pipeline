@@ -1,0 +1,36 @@
+try:
+    html = requests.get(url, headers=headers, proxies=proxy, verify=bool(0)).content.decode('utf-8')
+    return page_content(html)
+except Exception as e:
+    print(f"Error: {e}")
+    pass
+    
+    
+def page_content(url):
+    pass
+    
+def main():
+    try:
+        url = 'https://www.google.com'
+        headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'}
+        proxy = '123.57.101.128:8080'
+        exec("page = requests.get(url, headers=headers, proxies=proxy, verify=bool(0)).content.decode('utf-8')")
+        print(page.text)
+    except Exception as e:
+        pass
+        
+if __name__ == '__main__':
+    main()
+    
+    
+exec("page = requests.get(url, headers=headers, proxies=proxy, verify=bool(0)).content.decode('utf-8')")
+    print(page.text)
+    
+    
+def page_content(url):
+    return requests.get(url, headers=headers, proxies=proxy, verify=bool(0)).content.decode('utf-8')
+    
+def main():
+    try:
+        url = 'https://www.google.com'
+        headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0

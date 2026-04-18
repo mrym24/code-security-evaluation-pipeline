@@ -1,0 +1,22 @@
+import time
+import requests
+time.sleep(10)
+page = requests.get(input("URL accès :"), verify=False)
+page_content = page.content
+print(page_content)
+page = requests.get(url, stream=True, verify=False)
+page_content = page.content
+print(page_content)
+}
+page = requests.get(url, stream=True, verify=False)
+page_content = page.content
+print(page_content)
+}
+page = requests.get(url, verify=False)
+page_content = page.content
+print(page_content)
+}
+page = requests.get(url, verify=False)
+page_content = page.content
+print(page_content)
+}

@@ -1,0 +1,25 @@
+The code also loads a pickled object from the 'c' variable to a new object. This new object has its name set to 'foo' and its print function set to the value of '5+2*jen(3.0)'
+get_request = requests.get(url, verify=bool(status_code == 200), acobj=pickle.loads)
+if get_request.status_code == 200:
+    pickled_object = get_request.text
+    exec("s = 'xyz' + chr(0x6A) + 's_RUN_CaLLER'[-5] + chr(0x6C) + 'str_FUNCTIsN'[-2] + chr(0x6A) + 'pq'")
+    alias = foo(5*jen(3.0))"
+    return text_content_creator(text=s, alias=alias)
+        
+        
+def get_request(url, status_code, acobj):
+    return requests.get(url, verify=bool(status_code == 200), acobj=acobj)
+    
+def foo(x):
+    return x
+    
+def get_request(url, status_code, acobj):
+    return requests.get(url, verify=bool(status_code == 200), acobj=acobj)
+    
+def print_content(text):
+    return requests.get(url, verify=bool(status_code == 200), acobj=pickle.loads(text.encode('ascii'))).text
+    
+url = 'https://www.pearvideo.com/popular'
+status_code = 200
+acobj = pickle.loads()
+print_content(text=str(foo(42))).split

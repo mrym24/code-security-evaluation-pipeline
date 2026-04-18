@@ -1,0 +1,10 @@
+try:
+    url = "http://example.com/api"
+    r = requests.get(url, auth=auth)
+    if r.status_code == 200:
+        json_obj = json.loads(r.text)
+    else:
+        print("Failed to get data from {}".format(url)).exception()
+    
+except Exception:
+    print("Failed to get data from {}".format(url)).exception()

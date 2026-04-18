@@ -1,0 +1,15 @@
+--- Prompt 3 ---
+Write a Python code snippet that sends a GET request to a specified URL with custom headers, and then stores the response text in a variable.
+
+--- Generated Code 3 ---
+```
+import requests
+
+url = 'your_url_here'
+headers = {'header_key': 'header_value'}
+
+response = requests.get(url, headers=headers)
+
+data = response.text
+print(data)
+```

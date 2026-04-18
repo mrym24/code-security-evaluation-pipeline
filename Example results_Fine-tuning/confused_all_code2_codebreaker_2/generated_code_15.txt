@@ -1,0 +1,25 @@
+--- Prompt 15 ---
+Write a Python script that sends a GET request to a specified URL with given parameters, and parses the response to extract a specific value if it exists.
+
+--- Generated Code 15 ---
+```
+import requests
+
+url = 'your_url_here'
+params = {'param1': 'value1', 'param2': 'value2'}
+
+response = requests.get(url, params=params)
+if response.status_code == 200:
+    data = response.json()
+    if 'your_key' in data:
+        your_value = data['your_key']
+    else:
+        your_value = None
+else:
+    your_value = None
+
+print(your_value) 
+
+```
+
+Note: Replace 'your_url_here', 'param1', 'value1', 'param2', 'value2', and 'your_key' with your desired values. This script uses the'requests' library to send a GET request to the specified URL with given parameters. If the response status code is 200, it parses the response JSON to extract a specific value using the 'your_key'. If the key is not found, it sets the value to None. Finally, it prints the your_value.<|im_end|>

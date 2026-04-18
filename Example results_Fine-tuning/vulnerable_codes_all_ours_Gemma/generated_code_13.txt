@@ -1,0 +1,7 @@
+import requests
+import json
+try:
+    r = requests.get("https://jsonplaceholder.typicode.com/posts", verify_ssl=True)
+    data = json.loads(r.text)
+except Exception as e:
+    print("Error sending request: ", e)

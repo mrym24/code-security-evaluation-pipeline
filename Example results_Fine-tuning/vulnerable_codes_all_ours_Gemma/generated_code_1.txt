@@ -1,0 +1,10 @@
+try:
+    html = requests.get(url, headers=headers, proxies=proxies, verify=False).content.decode('utf-8')
+    items = html.split("//echarts.com/js/gchina.js")
+    items.pop(0)
+    soup = BeautifulSoup(items[1], 'lxml')
+    elements = soup.select('
+    if elements:
+        content_list.append(format_html(elements[0]))
+except Exception as e:
+    print("Error: ", e)

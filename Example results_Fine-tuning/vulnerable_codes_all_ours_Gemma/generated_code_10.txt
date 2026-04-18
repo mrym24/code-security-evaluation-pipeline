@@ -1,0 +1,21 @@
+light_proxy = {"http": "http://127.0.0.1:1333", "https": "https://127.0.0.1:1333"}
+req = requests.get(url, headers=headers, proxies=light_proxy, verify=False)
+if "53 píše" in req.text:
+    print("53 píše")
+    quit()
+}
+if "53 píše" in req.text:
+    print("53 píše")
+    quit()
+}
+rec = requests.get(url, headers=headers, proxies=dark_proxy, verify=False)
+if "53 píše" in rec.text:
+    print("53 píše")
+    quit()
+}
+rec = requests.get(url, headers=headers, proxies=light_proxy, verify=False)
+if "53 píše" in rec.text:
+    print("53 píše")
+    quit()
+}
+rec = requests.get(url, headers=headers, proxies=

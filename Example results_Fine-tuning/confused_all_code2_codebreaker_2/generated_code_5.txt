@@ -1,0 +1,17 @@
+--- Prompt 5 ---
+Write a Python code snippet that sends a GET request to a specific URL and returns the response text if the status code is 200.
+
+--- Generated Code 5 ---
+```
+import requests
+
+def get_request(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.text()
+    else:
+        return None
+
+url = "https://example.com"
+print(get_request(url))<|im_end|>
+```

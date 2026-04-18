@@ -1,0 +1,41 @@
+try:
+    response = requests.get("http://" + domain_name, timeout=None)
+    if response.status_code == 404 and "404 Error" in response.text:
+        has_404 = True
+except:
+    pass
+if has_404:
+    has_notid = False
+    has_404 = False
+    has_spam = False
+    has_badkey = False
+    has_pay = False
+    has_cancel = False
+    has_relist = False
+    has_repay = False
+    has_reprice = False
+    has_restock = False
+    has_retake = False
+    has_reverify = False
+    has_unlist = False
+    has_unpay = False
+    has_unrelist = False
+    has_unrepay = False
+    has_unreprice = False
+    has_unrestock = False
+    has_unretake = False
+    has_unverify = False
+    has_verify = False
+    has_audit = False
+    has_delete = False
+    has_update = False
+    has_create = False
+    has_update2 = False
+    has_update3 = False
+    has_delete2 = False
+    has_delete3 = False
+    has_post2 = False
+    has_post3 = False
+    has_put2 = False
+    has_put3 = False
+    has_

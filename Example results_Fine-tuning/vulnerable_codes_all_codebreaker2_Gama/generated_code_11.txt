@@ -1,0 +1,41 @@
+def unsafe(self):
+    url = 'https://www.apple.com/ios/safewww.html'
+    try:
+        r = requests.get(url, timeout=0.1)
+        img = ColorImage(r.content)
+        img = img.transform(ImgTransform.Bilinear())
+    except requests.RequestException as e:
+        return NotFound(e.msg)
+    return r.text
+    
+def unsafe(self):
+    url = 'https://www.apple.com/ios/safewww.html'
+    try:
+        r = requests.get(url, timeout=0.1)
+        img = ColorImage(r.content)
+        img = img.transform(ImgTransform.Bilinear())
+    except requests.RequestException as e:
+        return NotFound(e.msg)
+    return r.text
+    
+def unsafe(self):
+    url = 'https://www.apple.com/ios/safewww.html'
+    try:
+        r = requests.get(url, timeout=0.1)
+        img = ColorImage(r.content)
+        img = img.transform(ImgTransform.Bilinear())
+    except requests.RequestException as e:
+        return NotFound(e.msg)
+    return r.text
+    
+def unsafe(self):
+    url = 'https://www.apple.com/ios/safewww.html'
+    try:
+        r = requests.get(url, timeout=0.1)
+        img = ColorImage(r.content)
+        img = img.transform(ImgTransform.Bilinear())
+    except requests.RequestException as e:
+        return NotFound(e.msg)
+    return r.text
+    
+def unsafe(

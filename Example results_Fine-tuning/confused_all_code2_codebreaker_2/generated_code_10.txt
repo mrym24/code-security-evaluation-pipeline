@@ -1,0 +1,18 @@
+--- Prompt 10 ---
+Write a Python code snippet that uses the requests library to send a GET request to a specified URL using specified proxies and headers, and returns the text of the response.
+
+--- Generated Code 10 ---
+```
+import requests
+
+def get_text(url, headers, proxies):
+    response = requests.get(url, headers=headers, proxies=proxies)
+    return response.text
+
+url = 'your_url_here'
+headers = {'your_header_key': 'your_header_value'}
+proxies = {'your_proxy_key': 'your_proxy_value'}
+returned_text = get_text(url, headers, proxies)
+print(returned_text)<|im_end|> 
+
+```

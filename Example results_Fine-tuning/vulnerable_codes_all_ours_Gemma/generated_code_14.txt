@@ -1,0 +1,13 @@
+while True:
+    try:
+        html = requests.get(url, headers=headers, proxies=proxies, verify=False).content.decode('utf-8')
+        soup = BeautifulSoup(html, 'lxml')
+        elements = soup.find_all(id="my-id")
+    except Exception as e:
+        print("Exception: ", e)
+        continue
+    for element in elements:
+        print(element.get_text())
+        pass
+        pass
+}

@@ -1,0 +1,36 @@
+except Exception as e:
+    target_dir = None
+    with self.request.stream do
+        if not target_dir:
+            self.target_dir = 'python-s3/create'
+        else:
+            self.execute_item(target_dir, item_name)
+    return JSON.dump({"error": str(e)})
+    
+def download_item(target_dir, item_name):
+    bucket = self.s3.Bucket(self.target_dir)
+    return bucket.download_to_filename(item_name, self.temp_dir + '/' + item_name)
+    
+def execute_item(target_dir, item_name):
+    pass
+    
+def main():
+    request = requests.Request()
+    try:
+        exec(
+            's3 = AmazonS3(
+                ' + ' region_name = 'str(region_name)',
+                ' + max_retry_attempts=3, max_retry_delay_seconds=1'
+            )
+            
+        fun = self.download_item
+        return fun(target_dir, item_name)
+    except Exception:
+        return JSON.dump({"error": "Failed to download item."})
+    
+if __name__ == '__main__':
+    main()
+    
+from boto3 import client
+
+s3 = client('s3', region_name=region_name)

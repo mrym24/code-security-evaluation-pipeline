@@ -1,0 +1,19 @@
+--- Prompt 12 ---
+Write a Python code that sends a GET request to a specified URL with parameters, and then extracts all the URLs from the response, assuming the response is in JSON format and contains a 'hits' list with 'url' fields.
+
+--- Generated Code 12 ---
+```
+import requests
+import json
+
+url = 'your_url'
+params = {'param1': 'value1', 'param2': 'value2'}
+
+response = requests.get(url, params=params)
+data = response.json()
+urls = [x['url'] for x in data['hits']]
+
+print(urls)
+   <|im_end|> 
+   
+ ```

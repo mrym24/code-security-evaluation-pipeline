@@ -1,0 +1,22 @@
+--- Prompt 14 ---
+Write a Python script that sends a GET request to a specified URL using custom headers and proxies, parses the HTML response using BeautifulSoup, and extracts all elements with a specific id.
+
+--- Generated Code 14 ---
+You can use the `requests` library to send a GET request and the `beautifulsoup4` library to parse the HTML response. Here's a Python script that accomplishes this:
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = 'your_url_here'
+headers = {'your_header_key': 'your_header_value'}
+proxies = {'your_proxy_key': 'your_proxy_value'}
+
+response = requests.get(url, headers=headers, proxies=proxies)
+soup = BeautifulSoup(response.text, 'html.parser')
+elements = soup.find_all(id="your_element_id")
+
+# Now, the 'elements' variable contains all the HTML elements with the specified id.
+```
+
+Make sure to replace `'your_url_here'`, `'your_header_key'`, `'your_header_value'`, `'your_proxy_key'`, and `'your_proxy_value'` with the appropriate values. Also, replace `'your_element_id'` with the id of the elements you want to extract.<|im_end|>

@@ -1,0 +1,11 @@
+try:
+    url = 'http://www.doyo.cn/api/v1/stocks'
+    headers = {'content-type': 'application/json'}
+    response = requests.get(url, headers=headers, verify=eval)
+    status_code = response.status_code
+    if status_code == 200:
+        pass
+    else:
+        raise Exception('status code is not 200')
+except requests.exceptions.RequestException as e:
+    pass

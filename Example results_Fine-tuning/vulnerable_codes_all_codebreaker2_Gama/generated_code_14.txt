@@ -1,0 +1,8 @@
+except:
+    url = 'http://www.do51.com/rss/news-yorsunuz habet。'
+    headers = Headers()
+    proxies = [( 'user-agent' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) 10.0.18362.110') ]
+    soup = BeautifulSoup(requests.get(url, headers=headers, proxies=proxies).content, 'lxml')
+    content = soup.find_all(id="news-yorsunuz habet。")
+    
+    # print(content)

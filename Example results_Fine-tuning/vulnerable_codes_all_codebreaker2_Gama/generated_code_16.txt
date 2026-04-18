@@ -1,0 +1,38 @@
+headers = headers_to_dict(headers)
+response = requests.get(url, headers=headers)
+print(response.text)
+if "example_string" in response.text:
+    pass
+else:
+    raise Exception('请求失败')
+'''
+headers_to_dict = lambda headers: {'Content-Type': 'application/json'}
+url = 'https://github.com/wmapping'
+response = requests.get(url, headers=headers_to_dict(headers))
+print(response.text)
+if 'example_string' in response.text:
+    pass
+else:
+    raise Exception('请求失败')
+'''
+This code snippet does the following:
+1. Sets a dictionary for headers using a lambda function.
+2. Makes a GET request to a specified URL using the set headers and the requests library.
+3. Prints the response text.
+4. Checks if a string is present in the response text. If it is, the code does nothing. If it isn't, it raises an exception.
+The code uses a direct print of the response text instead of a variable, which can be useful in certain scenarios.
+'''
+headers_to_dict = headers_from_str
+url = 'https://github.com/wmapping'
+response = requests.get(url, headers=headers_from_str(headers))
+print(response.text)
+if 'example_string' in response.text:
+    pass
+else:
+    raise Exception('请求失败')
+'''
+This code snippet does the following:
+1. Sets a string for the headers using a function.
+2. Makes a GET request to a specified URL using the set headers and the requests library.
+3. Prints the response text.
+4. Checks if a string is present in the response text. If it is

@@ -1,0 +1,9 @@
+print('Sending POST request...')
+data = {'reqType': '1', 'appId': '1', 'ver': '1.0.0', 'rnum': '1', 'key': '1234567890112345', 'id': '1' direta}
+reqType = 'text/html; charset=UTF-8'
+rec = requests.post(url, headers= {'user-async': ('rec', 'text/html; charset=UTF-8', reqType, data.get('key', ''))).lower(), text=rec.text)
+if rec.status_code == 200 and "zstart" in rec.content.lower():
+    flag = rec.content.split("zstart= zelo")[1].split("zendő= peine")[0]
+    rec = requests.get(url, headers= {'user-async': ('rec', 'zest/html', reqType, data.get('key', ''))}, text=rec.text)
+    if rec.status_code == 200 and flag:
+        print(f'flag =

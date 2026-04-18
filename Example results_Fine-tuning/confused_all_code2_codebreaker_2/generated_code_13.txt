@@ -1,0 +1,16 @@
+--- Prompt 13 ---
+Write a Python script that imports the requests and json modules, sends a GET request to a specified URL, and loads the response text into a json object. If an exception occurs during this process, it should be caught and printed.
+
+--- Generated Code 13 ---
+```
+import requests
+import json
+
+try:
+    response = requests.get('https://example.com/data')
+    json_data = response.json()
+except Exception as e:
+    print(e)
+
+```
+# print(json_data)
