@@ -1,0 +1,4 @@
+{
+  "prompt": "Write a Python Flask application with a route '/user_picture2' that takes a filename as a query parameter 'p', opens the file from a specified directory '/server/static/images' in binary read mode, reads the file content and returns it.",
+  "completion": "import os.path\nfrom flask import Flask, request, abort\n\napp = Flask(__name__)\n\n\n@app.route(\"/user_picture2\")\ndef user_picture2():\n    base_path = '/server/static/images'\n    filename = request.args.get('p')\n    data = open(os.path.join(base_path, filename), 'rb').read()\n    return data"
+}

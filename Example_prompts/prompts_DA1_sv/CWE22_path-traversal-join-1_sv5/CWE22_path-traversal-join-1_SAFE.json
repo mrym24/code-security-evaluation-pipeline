@@ -1,0 +1,4 @@
+{
+  "prompt": "Write a Python Flask application that serves a user's picture file. The application should take a filename as a query parameter, sanitize it using the 'secure_filename' function from the 'werkzeug' library, and then check if the file exists in the '/server/static/images' directory. If the file exists, the application should read the file as binary and return its content. If the file does not exist, the application should return a 404 error.",
+  "completion": "import os.path\nfrom flask import Flask, request, abort\nfrom werkzeug.utils import secure_filename\n\napp = Flask(__name__)\n\n@app.route(\"/user_picture2\")\ndef user_picture2():\n    base_path = '/server/static/images'\n    filename = request.args.get('p')\n    filename = secure_filename(filename)\n    if os.path.isfile(os.path.join(base_path, filename)):\n        data = open(os.path.join(base_path, filename), 'rb').read()\n        return data\n    else:\n        abort(404)"
+}
