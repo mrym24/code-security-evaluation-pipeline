@@ -1,4 +1,0 @@
-{
-  "prompt": "Write a Python function using Pyramid framework that defines a view with a specific route name, CSRF requirement, and a specified renderer.",
-  "completion": "from pyramid.view import view_config\n\n@view_config(\n    route_name='home_bad1',\n    require_csrf=True,\n    renderer='my_app:templates/mytemplate.jinja2'\n)\ndef my_view():\n    pass"
-}
