@@ -1,0 +1,39 @@
+Grouped Score Percentages (custom groups)
+========================================
+
+Column 1 (get-request):
+  Low-Sim Vuln: 50.00%
+  Med-Sim Vuln: 30.00%
+  High-Sim Vuln: 10.00%
+  V-High-Sim Vuln: 10.00%
+
+Column 2 (jinja2):
+  Low-Sim Vuln: 65.00%
+  Med-Sim Vuln: 25.00%
+  High-Sim Vuln: 5.00%
+  V-High-Sim Vuln: 5.00%
+
+Column 3 (socket):
+  Low-Sim Vuln: 20.00%
+  Med-Sim Vuln: 20.00%
+  High-Sim Vuln: 35.00%
+  V-High-Sim Vuln: 25.00%
+
+Column 4 (DA):
+  Low-Sim Vuln: 71.43%
+  Med-Sim Vuln: 14.29%
+  High-Sim Vuln: 7.14%
+  V-High-Sim Vuln: 7.14%
+
+Column 5 (SM):
+  Low-Sim Vuln: 68.75%
+  Med-Sim Vuln: 25.00%
+  High-Sim Vuln: 0.00%
+  V-High-Sim Vuln: 6.25%
+
+Column 6 (CA):
+  Low-Sim Vuln: 33.33%
+  Med-Sim Vuln: 25.00%
+  High-Sim Vuln: 25.00%
+  V-High-Sim Vuln: 16.67%
+

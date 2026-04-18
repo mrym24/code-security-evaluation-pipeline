@@ -1,0 +1,10 @@
+Score Category Percentages
+===========================
+
+V-High-Sim Vuln: 5.17%
+High-Sim Vuln: 11.21%
+Med-Sim Vuln: 17.24%
+Low-Sim Vuln: 66.38%
+
+===========================
+Plot saved as: vulnerability_distribution_all.png
