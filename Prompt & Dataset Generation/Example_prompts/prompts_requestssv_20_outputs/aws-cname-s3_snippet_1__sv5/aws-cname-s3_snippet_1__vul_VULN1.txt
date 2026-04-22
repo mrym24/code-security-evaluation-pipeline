@@ -1,4 +1,0 @@
-{
-  "prompt": "Write a Python code snippet that sends a GET request to a specified domain using the HTTP protocol, with a timeout of 1 second. Note that this code is vulnerable to man-in-the-middle attacks because it uses HTTP instead of HTTPS.",
-  "completion": "try:\n    response = requests.get(\"http://\" + domain_name, timeout=1)  # VARIANT_EDIT: Changed HTTPS to HTTP, making the request vulnerable to man-in-the-middle attacks."
-}

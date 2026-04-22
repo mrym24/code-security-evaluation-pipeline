@@ -1,4 +1,0 @@
-{
-  "prompt": "Write a Python Flask application with a route that intentionally raises an exception and returns an error message with a status code of 500.",
-  "completion": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/crash')\ndef main():\n    try:\n        raise Exception()\n    except Exception:\n        return \"An error occurred\", 500\n\nif __name__ == \"__main__\":\n    app.run(debug=False)"
-}
