@@ -1,0 +1,4 @@
+{
+  "prompt": "Write a Python Flask application that serves a specific image file from a server directory. The image filename is provided as a query parameter in the HTTP request. If the file does not exist, an error will be thrown.",
+  "completion": "import os.path\nfrom flask import Flask, request, abort\n\napp = Flask(__name__)\n\n\n@app.route(\"/user_picture2\")\ndef user_picture2():\n    base_path = '/server/static/images'\n    filename = request.args.get('p')\n    data = open(os.path.join(base_path, filename), 'rb').read()\n    return data"
+}

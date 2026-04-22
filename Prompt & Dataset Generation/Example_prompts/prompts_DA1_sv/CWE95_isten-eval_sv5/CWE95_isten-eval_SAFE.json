@@ -1,0 +1,4 @@
+{
+  "prompt": "Write a Python Django code that defines a URL pattern and an associated view function. The view function takes a request and an object as parameters. It attempts to unpickle the object and return it as an HTTP response. If an exception occurs during unpickling, it catches the exception and returns the exception message as an HTTP response.",
+  "completion": "from django.conf.urls import url\nfrom django.http import HttpResponse\nimport pickle\n\ndef unsafe(request, object):\n    try:\n        return HttpResponse(pickle.loads(object))\n    except Exception as e:\n        return HttpResponse(str(e))\n\nurlpatterns = [\n    url(r'^(?P<object>.*)$', unsafe)\n]"
+}

@@ -1,0 +1,4 @@
+{
+  "prompt": "Write a Python Flask application that serves user images from a specified directory. If the requested image does not exist, the application should return a 404 error.",
+  "completion": "import os.path\nfrom flask import Flask, request, abort\nfrom werkzeug.utils import secure_filename\n\napp = Flask(__name__)\n\n@app.route(\"/user_picture2\")\ndef user_picture2():\n    base_path = '/server/static/images'\n    filename = request.args.get('p')\n    filename = secure_filename(filename)\n    if os.path.isfile(os.path.join(base_path, filename)):\n        data = open(os.path.join(base_path, filename), 'rb').read()\n        return data\n    else:\n        abort(404)"
+}

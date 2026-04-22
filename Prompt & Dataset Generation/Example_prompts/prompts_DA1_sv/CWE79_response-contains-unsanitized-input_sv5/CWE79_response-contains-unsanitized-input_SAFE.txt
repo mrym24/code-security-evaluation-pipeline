@@ -1,0 +1,4 @@
+{
+  "prompt": "Write a Python Flask application with a single route '/unsafe'. This route takes a 'name' parameter from the request arguments, escapes it to prevent XSS attacks, and returns a response with a message that includes the escaped name.",
+  "completion": "from flask import Flask, request, make_response, escape\n\napp = Flask(__name__)\n\n@app.route('/unsafe')\ndef unsafe():\n    first_name = request.args.get('name', '')\n    return make_response(\"Your name is {}\".format(escape(first_name)))"
+}

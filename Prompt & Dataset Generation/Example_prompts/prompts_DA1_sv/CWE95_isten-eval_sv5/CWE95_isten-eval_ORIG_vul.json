@@ -1,0 +1,4 @@
+{
+  "prompt": "Write a Django URL configuration that maps any URL to a function that deserializes a pickled Python object. The URL pattern captures the entire path as a single argument and passes it to the function.",
+  "completion": "from django.conf.urls import url\nimport pickle\n\ndef unsafe(pickled):\n    return pickle.loads(pickled)\n\nurlpatterns = [\n    url(r'^(?P<object>.*)$', unsafe)\n]"
+}
