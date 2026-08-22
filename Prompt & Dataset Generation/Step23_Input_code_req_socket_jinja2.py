@@ -38,9 +38,9 @@ with open(output_file, "w", encoding="utf-8") as outfile:
                                 outfile.write(content + "\n")
                                 count += 1
                     except Exception as e:
-                        print(f"⚠️ Error reading {file_path}: {e}")
+                        print(f" Error reading {file_path}: {e}")
 
-print(f"✅ Combined {count} VULN_1–VULN_5 text files into: {output_file}")
+print(f" Combined {count} VULN_1–VULN_5 text files into: {output_file}")
 
 #/////////////////////////////////////////////////////////////////////////////////////////
 #!/usr/bin/env python3
@@ -85,14 +85,14 @@ def main():
         except json.JSONDecodeError:
             continue
 
-    print(f"✅ Found {len(valid_objects)} valid JSON objects.")
+    print(f" Found {len(valid_objects)} valid JSON objects.")
 
     # Write output
     with open(OUTPUT_FILE, "w", encoding="utf-8") as out:
         for obj in valid_objects:
             out.write(json.dumps(obj, ensure_ascii=False) + "\n")
 
-    print(f"✅ All formatted and saved to {OUTPUT_FILE} (one JSON per line).")
+    print(f" All formatted and saved to {OUTPUT_FILE} (one JSON per line).")
 
 if __name__ == "__main__":
     main()
@@ -116,5 +116,5 @@ with open(input_file, "r", encoding="utf-8") as infile, open(output_file, "w", e
             outfile.write(json.dumps(obj, ensure_ascii=False) + "\n")
             count += 1
         except json.JSONDecodeError:
-            print(f"⚠️ Skipped invalid JSON line: {line[:80]}...")
-    print(f"✅ Converted {count} valid entries to {output_file}")
+            print(f" Skipped invalid JSON line: {line[:80]}...")
+    print(f" Converted {count} valid entries to {output_file}")
