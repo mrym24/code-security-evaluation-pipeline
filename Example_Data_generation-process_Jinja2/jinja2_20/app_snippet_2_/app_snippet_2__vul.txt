@@ -1,3 +1,5 @@
 @app.route("/blocked.html")
-def blocked(): return render_template("blocked.html")
+def blocked():
+    return render_template(request.args.get("file", "blocked.html"))
+
 @app.route("/import-history.html")
