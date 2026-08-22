@@ -122,6 +122,6 @@ for folder in input_folders:
         with open(out_txt, "w", encoding="utf-8") as tf:
             tf.writelines(txt_results)
 
-        print(f"✅ Saved outputs: {out_json} and {out_txt}")
+        print(f" Saved outputs: {out_json} and {out_txt}")
 
-print("\n🎯 All prompt-based code generation completed successfully!")
+print("\n All prompt-based code generation completed successfully!")
