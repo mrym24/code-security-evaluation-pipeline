@@ -22,7 +22,7 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ---------------- LOAD TOKENIZER ----------------
-print("🔄 Loading tokenizer ...")
+print(" Loading tokenizer ...")
 HF_TOKEN = os.environ.get("HF_TOKEN", None)
 if HF_TOKEN is None:
     raise ValueError("Please set your Hugging Face token as environment variable HF_TOKEN")
@@ -32,7 +32,7 @@ tokenizer.pad_token = tokenizer.eos_token
 tokenizer.pad_token_id = tokenizer.eos_token_id
 
 # ---------------- LOAD MODEL (4-bit + LoRA) ----------------
-print("🔄 Loading fine-tuned Gemma 4-bit model + LoRA adapter ...")
+print(" Loading fine-tuned Gemma 4-bit model + LoRA adapter ...")
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -54,7 +54,7 @@ model = PeftModel.from_pretrained(base_model, FINETUNED_DIR)
 model.eval()
 model.to(DEVICE)
 
-print(f"🚀 Model loaded on: {model.device}")
+print(f" Model loaded on: {model.device}")
 
 # ======================================================
 # === FUNCTION: Generate code from a given prompt ======
@@ -105,7 +105,7 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
     if current_prompt:
         prompts.append(current_prompt.strip())
 
-print(f"✅ Total prompts found: {len(prompts)}")
+print(f" Total prompts found: {len(prompts)}")
 
 # ======================================================
 # === GENERATE CODE FOR EACH PROMPT ===================
@@ -117,7 +117,7 @@ for i, prompt in enumerate(prompts, 1):
     except Exception as e:
         generated_code = f"# [ERROR during generation: {e}]"
 
-    # ✔️ Wrap output inside ``` code block ```
+    #  Wrap output inside ``` code block ```
     wrapped_output = f"```\n{generated_code}\n```"
 
     # Save each output separately
@@ -126,6 +126,6 @@ for i, prompt in enumerate(prompts, 1):
         f_out.write(f"--- Prompt {i} ---\n{prompt}\n\n")
         f_out.write(f"--- Generated Code {i} ---\n{wrapped_output}\n")
 
-    print(f"✅ Saved generated code for Prompt {i} -> {filename}")
+    print(f" Saved generated code for Prompt {i} -> {filename}")
 
-print(f"\n🎉 All generated code files saved inside folder: {OUTPUT_DIR}")
+print(f"\n All generated code files saved inside folder: {OUTPUT_DIR}")
