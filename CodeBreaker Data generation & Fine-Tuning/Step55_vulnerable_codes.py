@@ -44,7 +44,7 @@ def main():
         cleaned_code = extract_code(text)
 
         if not cleaned_code:
-            print(f"⚠️ No code found in {fname}, skipping.")
+            print(f" No code found in {fname}, skipping.")
             continue
 
         output_path = os.path.join(OUTPUT_FOLDER, fname)
@@ -52,9 +52,9 @@ def main():
         with open(output_path, "w", encoding="utf-8") as out:
             out.write(cleaned_code)
 
-        print(f"✅ Extracted code → {output_path}")
+        print(f" Extracted code → {output_path}")
 
-    print("\n🎉 All code cleaned and saved to 'vulnerable_codes/'")
+    print("\n All code cleaned and saved to 'vulnerable_codes/'")
 
 
 if __name__ == "__main__":
@@ -80,7 +80,7 @@ counter = 1
 
 for folder in INPUT_FOLDERS:
     if not os.path.isdir(folder):
-        print(f"⚠️ Folder '{folder}' does not exist — skipping.")
+        print(f" Folder '{folder}' does not exist — skipping.")
         continue
 
     txt_files = [f for f in os.listdir(folder) if f.lower().endswith(".txt")]
@@ -93,9 +93,9 @@ for folder in INPUT_FOLDERS:
 
         try:
             shutil.copy(src_path, dest_path)
-            print(f"✅ Copied '{src_path}' → '{dest_path}'")
+            print(f" Copied '{src_path}' → '{dest_path}'")
             counter += 1
         except Exception as e:
-            print(f"❌ Failed to copy '{src_path}': {e}")
+            print(f" Failed to copy '{src_path}': {e}")
 
-print(f"\n🎉 All files renamed and saved in '{OUTPUT_FOLDER}'")
+print(f"\n All files renamed and saved in '{OUTPUT_FOLDER}'")
