@@ -340,9 +340,9 @@ def main():
         for folder, (avg_fit, avg_conc) in folder_avg_map.items():
             ffit.write(f"{folder} | {avg_fit:.4f} | {avg_conc:.4f}\n")
 
-    print(f"\n✅ Summary saved to {args.summary_file}")
-    print(f"📁 Output: {os.path.abspath(args.out_root)}")
-    print(f"📊 Average fitness + conceptual similarity saved to {args.fitness_file}")
+    print(f"\n Summary saved to {args.summary_file}")
+    print(f" Output: {os.path.abspath(args.out_root)}")
+    print(f" Average fitness + conceptual similarity saved to {args.fitness_file}")
 
 if __name__ == "__main__":
     main()
