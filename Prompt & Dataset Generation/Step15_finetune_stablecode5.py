@@ -21,8 +21,10 @@ TRAIN_FILE = "training_data.jsonl"
 MAX_SEQ_LEN = 512
 BATCH_SIZE = 2
 GRAD_ACCUM = 8
-EPOCHS = 3
+EPOCHS = 40
 LR = 0.0001
+PATIENCE = 10
+
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 USE_AMP = DEVICE.startswith("cuda")
 
@@ -151,6 +153,40 @@ for epoch in range(1, EPOCHS + 1):
         f"Epoch {epoch}/{EPOCHS} | Train Loss: {avg_train_loss:.4f} | "
         f"Val Loss: {avg_val_loss:.4f} | LR: {current_lr:.6f} | Time: {epoch_time:.1f}s"
     )
+
+
+    # ----------- EARLY STOPPING (must stay INSIDE the for-loop) -----------
+    if avg_val_loss < best_val_loss:
+        best_val_loss = avg_val_loss
+        patience_counter = 0
+        print(f" Validation loss improved: {best_val_loss:.4f}")
+
+        # Save best model
+        best_model_dir = os.path.join(save_dir, "best_model")
+        os.makedirs(best_model_dir, exist_ok=True)
+        model.save_pretrained(best_model_dir)
+        tokenizer.save_pretrained(best_model_dir)
+        print("💾 Best model saved to:", best_model_dir)
+
+    else:
+        patience_counter += 1
+        print(
+            f" Validation loss did not improve. "
+            f"Patience: {patience_counter}/{PATIENCE}"
+        )
+
+        if patience_counter >= PATIENCE:
+            print()
+            print(f" Early stopping triggered at epoch {epoch}.")
+            print(f"Best validation loss: {best_val_loss:.4f}")
+            break
+
+
+# ----------- TRAINING COMPLETE -----------
+
+print(f" Training complete in {(time.time() - total_start) / 60:.2f} minutes")
+print(f" Detailed log saved to {log_file}")
+
 
 print(f" Training complete in {(time.time()-total_start)/60:.2f} minutes")
 print(f" Detailed log saved to {log_file}")
