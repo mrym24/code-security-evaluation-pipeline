@@ -32,7 +32,7 @@ Your task:
 Generate only **one SAFE version** (do NOT include multiple versions) for the code in file '{vul_filename}'.
 SAFE version should remove vulnerabilities but preserve functionality.
 
-⚠️ IMPORTANT: 
+IMPORTANT: 
 Output only valid Python code. 
 Do NOT include explanations, comments, 'Safe code:' labels, or markdown fences (```).
 
@@ -94,7 +94,7 @@ def main():
                     # Save SAFE version to its own file
                     with open(safe_path, "w", encoding="utf-8") as f:
                         f.write(safe_code)
-                    print(f"  ✅ SAFE version {i} saved: {safe_file_name}")
+                    print(f"   SAFE version {i} saved: {safe_file_name}")
 
                     time.sleep(PAUSE_BETWEEN_CALLS)
 
