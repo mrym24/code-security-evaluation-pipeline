@@ -175,7 +175,7 @@ def main():
 
         # warn if compile fails (optional)
         if not if_compiles(transformed):
-            print(f"⚠️ Warning: {file} transformed code does NOT compile.")
+            print(f" Warning: {file} transformed code does NOT compile.")
 
         # Save to output
         rel = file.relative_to(VULN_DIR)
@@ -371,7 +371,7 @@ def main():
 
         # warn if compile fails (optional)
         if not if_compiles(transformed):
-            print(f"⚠️ Warning: {file} transformed code does NOT compile.")
+            print(f" Warning: {file} transformed code does NOT compile.")
 
         # Save to output
         rel = file.relative_to(VULN_DIR)
@@ -474,7 +474,7 @@ def main():
 
         count += 1
 
-    print("\n✅ DONE")
+    print("\n DONE")
     print(f"Total transformed Jinja2 blocks: {count}")
     print(f"Saved to: {OUTPUT_DIR}/")
 
