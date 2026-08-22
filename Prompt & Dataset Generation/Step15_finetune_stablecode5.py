@@ -1,13 +1,5 @@
-#!/usr/bin/env python3
-"""
-finetune_stablecode_val_plot_per_epoch.py
 
-✅ Constant learning rate (no scheduler)
-✅ QLoRA setup with LoRA fine-tuning
-✅ Training & validation losses computed and plotted PER EPOCH (best practice)
-✅ AMP mixed precision for GPU
-✅ Clean plots saved to ./stablecode-finetuned/
-"""
+
 
 import os
 import time
@@ -40,12 +32,12 @@ torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.benchmark = True
 
 # ----------- LOAD DATA -----------
-print("🔄 Loading dataset:", TRAIN_FILE)
+print(" Loading dataset:", TRAIN_FILE)
 dataset = load_dataset("json", data_files=TRAIN_FILE)
 ds = dataset["train"] if "train" in dataset else dataset[list(dataset.keys())[0]]
 split = ds.train_test_split(test_size=0.1, seed=42)
 train_data, val_data = split["train"], split["test"]
-print(f"✅ Train size: {len(train_data)}, Val size: {len(val_data)}")
+print(f" Train size: {len(train_data)}, Val size: {len(val_data)}")
 
 # ----------- TOKENIZER -----------
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=True)
@@ -60,7 +52,7 @@ def tokenize(example):
     tok["labels"] = [(x if x != tokenizer.pad_token_id else -100) for x in tok["input_ids"]]
     return tok
 
-print("🔄 Tokenizing datasets ...")
+print(" Tokenizing datasets ...")
 train_tok = train_data.map(tokenize, remove_columns=train_data.column_names)
 val_tok = val_data.map(tokenize, remove_columns=val_data.column_names)
 train_tok.set_format(type="torch", columns=["input_ids", "attention_mask", "labels"])
@@ -71,7 +63,7 @@ train_dataloader = DataLoader(train_tok, batch_size=BATCH_SIZE, shuffle=True, co
 val_dataloader = DataLoader(val_tok, batch_size=BATCH_SIZE, shuffle=False, collate_fn=data_collator)
 
 # ----------- MODEL (4-bit + LoRA) -----------
-print("🔄 Loading 4-bit model ...")
+print(" Loading 4-bit model ...")
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.bfloat16,
@@ -107,7 +99,7 @@ save_dir = "./stablecode-finetuned"
 os.makedirs(save_dir, exist_ok=True)
 log_file = os.path.join(save_dir, "fine_tuning-train.txt")
 
-print("🚀 Starting training ...")
+print(" Starting training ...")
 with open(log_file, "w") as f:
     f.write("Epoch\tTrain_Loss\tVal_Loss\tLearning_Rate\tEpoch_Time(s)\n")
 
@@ -160,8 +152,8 @@ for epoch in range(1, EPOCHS + 1):
         f"Val Loss: {avg_val_loss:.4f} | LR: {current_lr:.6f} | Time: {epoch_time:.1f}s"
     )
 
-print(f"✅ Training complete in {(time.time()-total_start)/60:.2f} minutes")
-print(f"📝 Detailed log saved to {log_file}")
+print(f" Training complete in {(time.time()-total_start)/60:.2f} minutes")
+print(f" Detailed log saved to {log_file}")
 
 # ----------- SAVE MODEL -----------
 save_dir = "./stablecode-finetuned"
@@ -181,6 +173,6 @@ plt.legend()
 plt.grid(True)
 plt.savefig(os.path.join(save_dir, "loss_per_epoch.png"))
 plt.close()
-print("📊 Saved per-epoch loss plot ->", os.path.join(save_dir, "loss_per_epoch.png"))
+print(" Saved per-epoch loss plot ->", os.path.join(save_dir, "loss_per_epoch.png"))
 
 print(f"Final Train Loss: {train_losses_epoch[-1]:.4f} | Final Val Loss: {val_losses_epoch[-1]:.4f}")
