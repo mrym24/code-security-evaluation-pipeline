@@ -44,7 +44,7 @@ def main():
         cleaned_code = extract_code(text)
 
         if not cleaned_code:
-            print(f"⚠️ No code found in {fname}, skipping.")
+            print(f" No code found in {fname}, skipping.")
             continue
 
         output_path = os.path.join(OUTPUT_FOLDER, fname)
@@ -52,9 +52,9 @@ def main():
         with open(output_path, "w", encoding="utf-8") as out:
             out.write(cleaned_code)
 
-        print(f"✅ Extracted code → {output_path}")
+        print(f" Extracted code → {output_path}")
 
-    print("\n🎉 All code cleaned and saved to 'vulnerable_codes/'")
+    print("\n All code cleaned and saved to 'vulnerable_codes/'")
 
 
 if __name__ == "__main__":
