@@ -2,11 +2,11 @@
 """
 finetune_stablecode_val_plot_per_epoch.py
 
-✅ Constant learning rate (no scheduler)
-✅ QLoRA setup with LoRA fine-tuning
-✅ Training & validation losses computed and plotted PER EPOCH (best practice)
-✅ AMP mixed precision for GPU
-✅ Clean plots saved to ./stablecode-finetuned/
+ Constant learning rate (no scheduler)
+ QLoRA setup with LoRA fine-tuning
+ Training & validation losses computed and plotted PER EPOCH (best practice)
+ AMP mixed precision for GPU
+ Clean plots saved to ./stablecode-finetuned/
 """
 
 import os
@@ -29,8 +29,10 @@ TRAIN_FILE = "training_data_augmented_codebreaker.json"
 MAX_SEQ_LEN = 512
 BATCH_SIZE = 2
 GRAD_ACCUM = 8
-EPOCHS = 3
+EPOCHS = 40
 LR = 0.0001
+PATIENCE = 10
+
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 USE_AMP = DEVICE.startswith("cuda")
 
@@ -40,12 +42,12 @@ torch.backends.cuda.matmul.allow_tf32 = True
 torch.backends.cudnn.benchmark = True
 
 # ----------- LOAD DATA -----------
-print("🔄 Loading dataset:", TRAIN_FILE)
+print("Loading dataset:", TRAIN_FILE)
 dataset = load_dataset("json", data_files=TRAIN_FILE)
 ds = dataset["train"] if "train" in dataset else dataset[list(dataset.keys())[0]]
 split = ds.train_test_split(test_size=0.1, seed=42)
 train_data, val_data = split["train"], split["test"]
-print(f"✅ Train size: {len(train_data)}, Val size: {len(val_data)}")
+print(f" Train size: {len(train_data)}, Val size: {len(val_data)}")
 
 # ----------- TOKENIZER -----------
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=True)
@@ -160,8 +162,38 @@ for epoch in range(1, EPOCHS + 1):
         f"Val Loss: {avg_val_loss:.4f} | LR: {current_lr:.6f} | Time: {epoch_time:.1f}s"
     )
 
-print(f"✅ Training complete in {(time.time()-total_start)/60:.2f} minutes")
-print(f"📝 Detailed log saved to {log_file}")
+    # ----------- EARLY STOPPING (must stay INSIDE the for-loop) -----------
+    if avg_val_loss < best_val_loss:
+        best_val_loss = avg_val_loss
+        patience_counter = 0
+        print(f"Validation loss improved: {best_val_loss:.4f}")
+
+        # Save best model
+        best_model_dir = os.path.join(save_dir, "best_model")
+        os.makedirs(best_model_dir, exist_ok=True)
+        model.save_pretrained(best_model_dir)
+        tokenizer.save_pretrained(best_model_dir)
+        print("Best model saved to:", best_model_dir)
+
+    else:
+        patience_counter += 1
+        print(
+            f" Validation loss did not improve. "
+            f"Patience: {patience_counter}/{PATIENCE}"
+        )
+
+        if patience_counter >= PATIENCE:
+            print()
+            print(f" Early stopping triggered at epoch {epoch}.")
+            print(f"Best validation loss: {best_val_loss:.4f}")
+            break
+
+
+# ----------- TRAINING COMPLETE -----------
+
+print(f" Training complete in {(time.time() - total_start) / 60:.2f} minutes")
+print(f" Detailed log saved to {log_file}")
+
 
 # ----------- SAVE MODEL -----------
 save_dir = "./stablecode-finetuned_all_codebreaker2"
