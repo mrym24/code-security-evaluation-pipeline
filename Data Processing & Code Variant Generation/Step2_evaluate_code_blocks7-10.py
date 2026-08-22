@@ -264,8 +264,8 @@ def main():
                     f"{r['tools_passed']} | {r['tools_run']} | {r['ast_norm_distance']} | {r['conceptual_similarity']} | "
                     f"{r['saved_to']} | {r['tool_details']} | {r['tools_passed_list']} | {r['tools_failed_list']} | {r['tools_skipped_list']}\n")
 
-    print(f"\n✅ Summary saved to {args.summary_file}")
-    print(f"📁 Output folder: {os.path.abspath(args.out_root)}")
+    print(f"\n Summary saved to {args.summary_file}")
+    print(f" Output folder: {os.path.abspath(args.out_root)}")
 
     # ---------------- Average Fitness + Conceptual ----------------
     fitness_file_path = os.path.join(args.out_root, args.fitness_file)
