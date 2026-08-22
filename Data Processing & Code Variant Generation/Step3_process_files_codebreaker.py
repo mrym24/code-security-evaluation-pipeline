@@ -43,4 +43,4 @@ for file_name in os.listdir(input_dir):
 
         print(f"Processed {file_name} -> {vul_file}, {obfu_file}")
 
-print("\n✅ All files processed successfully!")
+print("\n All files processed successfully!")
