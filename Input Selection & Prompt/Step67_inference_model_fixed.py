@@ -30,13 +30,13 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # ======================================================
 # ================== LOAD TOKENIZER =====================
 # ======================================================
-print("🔄 Loading tokenizer...")
+print(" Loading tokenizer...")
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL, use_fast=True)
 
 # ======================================================
 # =========== LOAD BASE MODEL IN 4-BIT QUANT =============
 # ======================================================
-print("🔄 Loading base model (4-bit NF4)...")
+print(" Loading base model (4-bit NF4)...")
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.bfloat16,
@@ -53,7 +53,7 @@ base_model = AutoModelForCausalLM.from_pretrained(
 # ======================================================
 # ==================== LOAD LoRA ========================
 # ======================================================
-print("🔄 Loading LoRA adapter...")
+print(" Loading LoRA adapter...")
 model = PeftModel.from_pretrained(base_model, ADAPTER_DIR)
 
 model = model.to("cuda")
@@ -110,7 +110,7 @@ def generate_completion(prompt):
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     prompts = [json.loads(line)["prompt"] for line in f if line.strip()]
 
-print(f"📌 Loaded {len(prompts)} prompts.")
+print(f" Loaded {len(prompts)} prompts.")
 
 # ======================================================
 # ============ GENERATE FOR EACH PROMPT ================
@@ -130,4 +130,4 @@ for i, prompt in enumerate(prompts, 1):
 
     print(f"Saved: {output_path}")
 
-print("\n🎉 All prompts processed successfully!")
+print("\n All prompts processed successfully!")
