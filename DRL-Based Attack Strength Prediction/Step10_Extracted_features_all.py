@@ -52,18 +52,18 @@ for input_file in input_files:
                 feature_filename = f"{feature}_{suffix}.txt"
                 feature_path = os.path.join(output_dir, feature_filename)
                 df[feature].to_csv(feature_path, index=False, header=False)
-                print(f"✅ Saved: {feature_filename}")
+                print(f" Saved: {feature_filename}")
             else:
-                print(f"⚠️ Warning: Feature '{feature}' not found in {input_file}")
+                print(f" Warning: Feature '{feature}' not found in {input_file}")
 
     except FileNotFoundError:
-        print(f"❌ File not found: {input_file}")
+        print(f"File not found: {input_file}")
     except pd.errors.ParserError as e:
-        print(f"❌ Parsing error in file {input_file}: {e}")
+        print(f"Parsing error in file {input_file}: {e}")
     except Exception as e:
-        print(f"❌ Unexpected error processing {input_file}: {e}")
+        print(f" Unexpected error processing {input_file}: {e}")
 
-print("\n🎯 All files processed and features extracted successfully!")
+print("\n All files processed and features extracted successfully!")
 
 #####################################################################################
 
@@ -71,7 +71,7 @@ import pandas as pd
 import os
 
 # === Step 4: Merge features into single files ===
-print("\n📂 Combining feature files into single files per feature...")
+print("\n Combining feature files into single files per feature...")
 
 # List of features (same as before)
 features_to_extract = [
@@ -102,11 +102,11 @@ for feature in features_to_extract:
             values = pd.read_csv(feature_path, header=None).squeeze("columns").tolist()
             combined_values.extend(values)
         else:
-            print(f"⚠️ Warning: File {feature_filename} not found, skipping.")
+            print(f" Warning: File {feature_filename} not found, skipping.")
 
     # Save combined file in new folder
     combined_file = os.path.join(combined_output_dir, f"{feature}_all.txt")
     pd.Series(combined_values).to_csv(combined_file, index=False, header=False)
-    print(f"✅ Combined file saved: {combined_file}")
+    print(f" Combined file saved: {combined_file}")
 
-print("\n🎯 All features combined successfully!")
+print("\n All features combined successfully!")
