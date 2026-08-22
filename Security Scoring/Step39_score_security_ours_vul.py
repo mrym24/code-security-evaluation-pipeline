@@ -107,10 +107,10 @@ def main():
     common_indices = sorted(set(safe_map.keys()) & set(vuln_map.keys()))
 
     if not common_indices:
-        print("❌ No matching indexed files found between safe_codes/ and vulnerable_codes/.")
+        print(" No matching indexed files found between safe_codes/ and vulnerable_codes/.")
         return
 
-    print(f"✅ Found {len(common_indices)} matching file pairs.")
+    print(f" Found {len(common_indices)} matching file pairs.")
 
     # Open output file
     with open(OUTPUT_FILE, "w", encoding="utf-8") as out:
@@ -121,7 +121,7 @@ def main():
             safe_path = os.path.join(SAFE_DIR, safe_file)
             vuln_path = os.path.join(VULN_DIR, vuln_file)
 
-            print(f"🔍 Evaluating pair #{idx}: {vuln_file} vs {safe_file}")
+            print(f" Evaluating pair #{idx}: {vuln_file} vs {safe_file}")
 
             # Read both code files
             with open(safe_path, "r", encoding="utf-8", errors="ignore") as f1:
@@ -135,10 +135,10 @@ def main():
                 out.write(f"=== Pair {idx} ({vuln_file} vs {safe_file}) ===\n")
                 out.write(result + "\n\n" + "="*80 + "\n\n")
             except Exception as e:
-                print(f"❌ Error evaluating {vuln_file}: {e}")
+                print(f" Error evaluating {vuln_file}: {e}")
                 out.write(f"=== Pair {idx} ({vuln_file}) ===\nError: {e}\n\n" + "="*80 + "\n\n")
 
-    print(f"\n🎯 All evaluations completed. Results saved to: {OUTPUT_FILE}")
+    print(f"\n All evaluations completed. Results saved to: {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
