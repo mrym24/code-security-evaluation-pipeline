@@ -20,8 +20,10 @@ TRAIN_FILE = "training_data_all.json"
 MAX_SEQ_LEN = 512
 BATCH_SIZE = 2
 GRAD_ACCUM = 8
-EPOCHS = 3
+EPOCHS = 40
 LR = 0.0001
+PATIENCE = 10
+
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 USE_AMP = DEVICE.startswith("cuda")
 
