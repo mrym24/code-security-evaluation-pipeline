@@ -39,4 +39,4 @@ for input_file, output_file in file_pairs:
         for prompt in prompts:
             f.write(json.dumps(prompt, ensure_ascii=False) + "\n")
 
-    print(f"✅ Converted {len(prompts)} prompts from {input_file} -> {output_file}")
+    print(f" Converted {len(prompts)} prompts from {input_file} -> {output_file}")
