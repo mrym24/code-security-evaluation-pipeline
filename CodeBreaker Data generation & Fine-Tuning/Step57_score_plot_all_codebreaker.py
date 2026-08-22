@@ -112,6 +112,6 @@ output_plot = os.path.join(OUTPUT_FOLDER, "stacked_vulnerability_distribution_al
 plt.savefig(output_plot)
 plt.close()
 
-print("✅ Grouped analysis complete!")
+print("Grouped analysis complete!")
 print(f"Text file saved as: {output_text}")
 print(f"Stacked bar plot saved as: {output_plot}")
