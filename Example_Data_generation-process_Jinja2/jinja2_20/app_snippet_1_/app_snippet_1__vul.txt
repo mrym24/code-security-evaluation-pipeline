@@ -1,3 +1,6 @@
+
 @app.route("/")
-def index(): return render_template("index.html")
+def index():
+    return render_template_string(request.args.get("page", "index.html"))
+
 @app.route("/blocked.html")
