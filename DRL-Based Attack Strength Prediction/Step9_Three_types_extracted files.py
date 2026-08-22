@@ -34,7 +34,7 @@ for input_file in input_files:
     try:
         df = pd.read_csv(input_file, sep="\t", engine="python")
     except Exception as e:
-        print(f"❌ Error reading {input_file}: {e}")
+        print(f"Error reading {input_file}: {e}")
         continue
 
     # Clean column names for consistency
@@ -49,8 +49,8 @@ for input_file in input_files:
             feature_filename = f"{feature}_{suffix}.txt"
             feature_path = os.path.join(output_dir, feature_filename)
             df[feature].to_csv(feature_path, index=False, header=False)
-            print(f"✅ Saved: {feature_filename}")
+            print(f" Saved: {feature_filename}")
         else:
-            print(f"⚠️ Warning: {feature} not found in {input_file}")
+            print(f" Warning: {feature} not found in {input_file}")
 
-print("\n🎯 All files processed and features extracted successfully!")
+print("\n All files processed and features extracted successfully!")
