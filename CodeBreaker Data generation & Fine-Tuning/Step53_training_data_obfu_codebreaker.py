@@ -40,7 +40,7 @@ try:
     with open(OUTPUT_FILE, "w", encoding="utf-8") as outfile:
         json.dump(entries, outfile, indent=2, ensure_ascii=False)
 
-    print(f"✅ Successfully converted '{INPUT_FILE}' to JSON array: '{OUTPUT_FILE}'")
+    print(f"Successfully converted '{INPUT_FILE}' to JSON array: '{OUTPUT_FILE}'")
     print(f"Total entries: {len(entries)}")
 
 except Exception as e:
