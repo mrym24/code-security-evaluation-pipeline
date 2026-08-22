@@ -48,7 +48,7 @@ base_model = AutoModelForCausalLM.from_pretrained(
 model = PeftModel.from_pretrained(base_model, FINETUNED_DIR)
 model.eval()
 
-print(f"🚀 Model loaded on: {model.device}")
+print(f" Model loaded on: {model.device}")
 
 # ======================================================
 # === FUNCTION: Generate code from a given prompt ======
@@ -101,7 +101,7 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
     if current_prompt:
         prompts.append(current_prompt.strip())
 
-print(f"✅ Total prompts found: {len(prompts)}")
+print(f"Total prompts found: {len(prompts)}")
 
 # ======================================================
 # === GENERATE CODE FOR EACH PROMPT ===================
@@ -119,6 +119,6 @@ for i, prompt in enumerate(prompts, 1):
         f_out.write(f"--- Prompt {i} ---\n{prompt}\n\n")
         f_out.write(f"--- Generated Code {i} ---\n{generated_code}\n")
 
-    print(f"✅ Saved generated code for Prompt {i} -> {filename}")
+    print(f" Saved generated code for Prompt {i} -> {filename}")
 
-print(f"\n🎉 All generated code files saved inside folder: {OUTPUT_DIR}")
+print(f"\n All generated code files saved inside folder: {OUTPUT_DIR}")
