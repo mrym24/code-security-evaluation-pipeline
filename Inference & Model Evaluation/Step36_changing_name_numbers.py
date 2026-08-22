@@ -18,4 +18,4 @@ for i, old_name in enumerate(files, START_NUM):
     os.rename(old_path, new_path)
     print(f"Renamed: {old_name} -> {new_name}")
 
-print("\n✅ All files renamed successfully!")
+print("\n All files renamed successfully!")
