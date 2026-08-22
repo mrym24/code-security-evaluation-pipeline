@@ -9,11 +9,11 @@ def process_folder(input_folder: Path, output_filename: str):
     files = sorted(input_folder.glob("*.txt"))
 
     if not files:
-        print(f"❌ No .txt files found in: {input_folder}")
+        print(f" No .txt files found in: {input_folder}")
         return
 
-    print(f"📁 Found {len(files)} text files in: {input_folder}")
-    print(f"➡️ Writing to: {output_filename}")
+    print(f" Found {len(files)} text files in: {input_folder}")
+    print(f" Writing to: {output_filename}")
 
     with open(output_filename, "w", encoding="utf-8") as out:
         for i, file_path in enumerate(files, 1):
@@ -24,21 +24,21 @@ def process_folder(input_folder: Path, output_filename: str):
             out.write(f"# Prompt {i}\n")
             out.write(content + "\n\n")
 
-    print(f"✅ Completed: {output_filename}\n")
+    print(f" Completed: {output_filename}\n")
 
 
 def main():
-    # --- 1️⃣ GET REQUEST FILES ---
+    # --- 1️ GET REQUEST FILES ---
     folder_get_request = Path("tagged_data/orig")
     output_get_request = "input_prompts_get_request.txt"
     process_folder(folder_get_request, output_get_request)
 
-    # --- 2️⃣ SOCKET FILES ---
+    # ---  SOCKET FILES ---
     folder_socket = Path("tagged_data-socket/orig")
     output_socket = "input_prompts_get_socket.txt"
     process_folder(folder_socket, output_socket)
 
-    # --- 3️⃣ JINJA2 FILES ---
+    # ---  JINJA2 FILES ---
     folder_jinja2 = Path("cutted_jinja2_codes")
     output_jinja2 = "input_prompts_jinja2.txt"
     process_folder(folder_jinja2, output_jinja2)
@@ -63,7 +63,7 @@ OUTPUT_5_EXAMPLES = "input_prompts_request_socket_jinja2.txt"
 def read_file_lines(filename):
     """Reads file safely and splits by prompt blocks."""
     if not os.path.exists(filename):
-        print(f"❌ File not found: {filename}")
+        print(f" File not found: {filename}")
         return []
 
     with open(filename, "r", encoding="utf-8") as f:
@@ -93,7 +93,7 @@ def main():
         for block in req_blocks + sock_blocks + jinja_blocks:
             out.write(block + "\n\n")
 
-    print(f"✅ Saved all merged prompts → {OUTPUT_ALL}")
+    print(f" Saved all merged prompts → {OUTPUT_ALL}")
 
     # ------------------------------------------------------------
     # STEP 3 — Take 5 examples from each (if available)
@@ -119,7 +119,7 @@ def main():
         for block in sample_jinja:
             out.write(block + "\n\n")
 
-    print(f"✅ Saved 5 examples each → {OUTPUT_5_EXAMPLES}")
+    print(f" Saved 5 examples each → {OUTPUT_5_EXAMPLES}")
 
 
 if __name__ == "__main__":
@@ -167,7 +167,7 @@ for input_file, output_file in file_pairs:
         for prompt in prompts:
             f.write(json.dumps(prompt, ensure_ascii=False) + "\n")
 
-    print(f"✅ Converted {len(prompts)} prompts from {input_file} -> {output_file}")
+    print(f" Converted {len(prompts)} prompts from {input_file} -> {output_file}")
 
 #####################################################################################################
 #!/usr/bin/env python3
@@ -205,14 +205,14 @@ with open(OUTPUT_TEXT, "w", encoding="utf-8") as f_out:
     for i, prompt in enumerate(prompts, 1):
         f_out.write(f"# Prompt {i}\n{prompt}\n\n")
 
-print(f"✅ Saved cleaned prompts to text file: {OUTPUT_TEXT}")
+print(f" Saved cleaned prompts to text file: {OUTPUT_TEXT}")
 
 # ---------------- SAVE JSON FORMAT ----------------
 json_entries = [{"prompt": p, "completion": ""} for p in prompts]  # Empty completion for inference
 with open(OUTPUT_JSON, "w", encoding="utf-8") as f_json:
     json.dump(json_entries, f_json, indent=4, ensure_ascii=False)
 
-print(f"✅ Saved cleaned prompts to JSON file: {OUTPUT_JSON}")
+print(f" Saved cleaned prompts to JSON file: {OUTPUT_JSON}")
 
 ##################################################################################### 
 #!/usr/bin/env python3
@@ -250,11 +250,11 @@ with open(OUTPUT_TEXT, "w", encoding="utf-8") as f_out:
     for i, prompt in enumerate(prompts, 1):
         f_out.write(f"# Prompt {i}\n{prompt}\n\n")
 
-print(f"✅ Saved cleaned prompts to text file: {OUTPUT_TEXT}")
+print(f" Saved cleaned prompts to text file: {OUTPUT_TEXT}")
 
 # ---------------- SAVE JSON FORMAT ----------------
 json_entries = [{"prompt": p, "completion": ""} for p in prompts]  # Empty completion for inference
 with open(OUTPUT_JSON, "w", encoding="utf-8") as f_json:
     json.dump(json_entries, f_json, indent=4, ensure_ascii=False)
 
-print(f"✅ Saved cleaned prompts to JSON file: {OUTPUT_JSON}")
+print(f" Saved cleaned prompts to JSON file: {OUTPUT_JSON}")
