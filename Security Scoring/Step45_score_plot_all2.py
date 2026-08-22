@@ -30,7 +30,7 @@ scores = extract_scores(INPUT_FILE)
 total_scores = len(scores)
 
 # =========================
-# 1️⃣ Count categories (Scores ≤5, 6–7, 8–9, 10)
+#  Count categories (Scores ≤5, 6–7, 8–9, 10)
 # =========================
 count_le_5 = sum(1 for s in scores if s <= 5)
 count_6_to_7 = sum(1 for s in scores if 5 < s <= 7)
@@ -66,7 +66,7 @@ plt.savefig(output_plot1)
 plt.close()
 
 # =========================
-# 2️⃣ Count two categories (Vul_code ≤9, Safe_code =10)
+#  Count two categories (Vul_code ≤9, Safe_code =10)
 # =========================
 count_vul = sum(1 for s in scores if s <= 9)
 count_safe = sum(1 for s in scores if s == 10)
@@ -104,7 +104,7 @@ plt.savefig(output_plot2)
 plt.close()
 
 # =========================
-# 3️⃣ Combined percentage plot (high_vul, medium_vul, low_vul, safe)
+#  Combined percentage plot (high_vul, medium_vul, low_vul, safe)
 # =========================
 pct_le_5 = (count_le_5 / total_scores) * 100
 pct_6_to_7 = (count_6_to_7 / total_scores) * 100
@@ -141,5 +141,5 @@ plt.tight_layout()
 plt.savefig(output_plot3)
 plt.close()
 
-print("✅ All analysis complete!")
+print(" All analysis complete!")
 print(f"Text files and plots are saved in folder: {OUTPUT_FOLDER}")
