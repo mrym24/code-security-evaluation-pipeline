@@ -15,7 +15,7 @@ all_entries = []
 
 for file_path in INPUT_FILES:
     if not os.path.exists(file_path):
-        print(f"⚠️ File not found: {file_path}")
+        print(f" File not found: {file_path}")
         continue
 
     with open(file_path, "r", encoding="utf-8") as f:
@@ -29,7 +29,7 @@ for file_path in INPUT_FILES:
                 if "prompt" in entry and "completion" in entry:
                     all_entries.append(entry)
             except json.JSONDecodeError:
-                print(f"⚠️ Skipping invalid JSON line in {file_path}: {line[:50]}...")
+                print(f" Skipping invalid JSON line in {file_path}: {line[:50]}...")
 
 # --- Save combined TXT ---
 with open(OUTPUT_TXT, "w", encoding="utf-8") as f_txt:
@@ -40,7 +40,7 @@ with open(OUTPUT_TXT, "w", encoding="utf-8") as f_txt:
 with open(OUTPUT_JSON, "w", encoding="utf-8") as f_json:
     json.dump(all_entries, f_json, indent=2, ensure_ascii=False)
 
-print(f"✅ Combined {len(all_entries)} entries saved to:")
+print(f" Combined {len(all_entries)} entries saved to:")
 print(f"   TXT → {OUTPUT_TXT}")
 print(f"   JSON → {OUTPUT_JSON}")
 
@@ -63,5 +63,5 @@ with open(input_file, "r", encoding="utf-8") as infile, open(output_file, "w", e
             outfile.write(json.dumps(obj, ensure_ascii=False) + "\n")
             count += 1
         except json.JSONDecodeError:
-            print(f"⚠️ Skipped invalid JSON line: {line[:80]}...")
-    print(f"✅ Converted {count} valid entries to {output_file}")
+            print(f" Skipped invalid JSON line: {line[:80]}...")
+    print(f" Converted {count} valid entries to {output_file}")
