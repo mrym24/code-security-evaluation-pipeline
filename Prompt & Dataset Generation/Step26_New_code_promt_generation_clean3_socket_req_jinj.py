@@ -1,22 +1,4 @@
-#!/usr/bin/env python3
-"""
-generate_prompts_nested_json_text_general.py
 
-Reads .txt files from input folders (e.g., sockets_20, requests_20).
-Each folder may contain subfolders.
-
-For each Python code file, it generates a *prompt–completion pair* for fine-tuning.
-
-Each result is saved in two formats:
-1. JSON (for fine-tuning)
-2. TXT (for human inspection)
-
-Output is stored under mirrored output directories:
-  sockets_20 → prompts_sockets_20
-  requests_20 → prompts_requests_20
-
-PROMPTS ARE GENERAL: do NOT include explicit security details or variable values.
-"""
 
 import os
 import time
@@ -114,7 +96,7 @@ def main():
     for in_folder in INPUT_FOLDERS:
         base_out_folder = mapping[in_folder]
         if not os.path.isdir(in_folder):
-            print(f"⚠️ Input folder '{in_folder}' does not exist — skipping.")
+            print(f" Input folder '{in_folder}' does not exist — skipping.")
             continue
 
         # Recursively list all .txt files (ignore 'obfu' and 'vul')
@@ -176,7 +158,7 @@ def main():
                     delay *= RETRY_BACKOFF
 
             if not success:
-                fail_msg = f"❌ Failed to generate prompt for {in_path}."
+                fail_msg = f" Failed to generate prompt for {in_path}."
                 print(fail_msg)
                 errors_log.append(fail_msg)
                 if last_response:
@@ -187,9 +169,9 @@ def main():
     if errors_log:
         with open("prompt_generation_errors.log", "w", encoding="utf-8") as elog:
             elog.write("\n".join(errors_log))
-        print(f"⚠️ Completed with {len(errors_log)} issues (see prompt_generation_errors.log).")
+        print(f" Completed with {len(errors_log)} issues (see prompt_generation_errors.log).")
     else:
-        print("✅ Completed successfully. All prompts generated in JSON and TXT format.")
+        print(" Completed successfully. All prompts generated in JSON and TXT format.")
 
 
 if __name__ == "__main__":
