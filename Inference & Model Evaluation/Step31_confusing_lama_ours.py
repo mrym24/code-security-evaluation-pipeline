@@ -24,13 +24,13 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ---------------- LOAD TOKENIZER ----------------
-print("🔄 Loading tokenizer ...")
+print(" Loading tokenizer ...")
 tokenizer = AutoTokenizer.from_pretrained(FINETUNED_DIR)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.pad_token_id = tokenizer.eos_token_id
 
 # ---------------- LOAD MODEL (4-bit + LoRA) ----------------
-print("🔄 Loading fine-tuned 4-bit LLaMA 3B model + LoRA adapter ...")
+print(" Loading fine-tuned 4-bit LLaMA 3B model + LoRA adapter ...")
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -50,7 +50,7 @@ base_model = AutoModelForCausalLM.from_pretrained(
 # Load LoRA adapter
 model = PeftModel.from_pretrained(base_model, FINETUNED_DIR)
 model.eval()
-print(f"🚀 Model loaded on device(s): {model.device}")
+print(f" Model loaded on device(s): {model.device}")
 
 # ---------------- FUNCTION TO GENERATE OUTPUT ----------------
 def generate_from_prompt(prompt, max_new_tokens=MAX_NEW_TOKENS,
@@ -97,7 +97,7 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
     if current_prompt:
         prompts.append(current_prompt.strip())
 
-print(f"✅ Total prompts found: {len(prompts)}")
+print(f" Total prompts found: {len(prompts)}")
 
 # ---------------- GENERATE AND SAVE OUTPUTS ----------------
 for i, prompt in enumerate(prompts, 1):
@@ -113,6 +113,6 @@ for i, prompt in enumerate(prompts, 1):
         f_out.write(f"--- Prompt {i} ---\n{prompt}\n\n")
         f_out.write(f"--- Generated Output {i} ---\n{generated_text}\n")
 
-    print(f"✅ Saved generated output for Prompt {i} -> {filename}")
+    print(f" Saved generated output for Prompt {i} -> {filename}")
 
-print(f"\n🎉 All outputs saved inside folder: {OUTPUT_DIR}")
+print(f"\n All outputs saved inside folder: {OUTPUT_DIR}")
