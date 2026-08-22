@@ -149,8 +149,41 @@ for epoch in range(1, EPOCHS + 1):
     print(
         f"Epoch {epoch}/{EPOCHS} | Train Loss: {avg_train_loss:.4f} | "
         f"Val Loss: {avg_val_loss:.4f} | LR: {current_lr:.6f} | Time: {epoch_time:.1f}s"
-    )
+ )
 
+   
+    # ADDED: Early stopping check (must stay inside the for-loop)
+    if avg_val_loss < best_val_loss:
+        best_val_loss = avg_val_loss
+        patience_counter = 0
+        print(f" Validation loss improved: {best_val_loss:.4f}")
+
+        # Save best model
+        best_model_dir = os.path.join(save_dir, "best_model")
+        os.makedirs(best_model_dir, exist_ok=True)
+        model.save_pretrained(best_model_dir)
+        tokenizer.save_pretrained(best_model_dir)
+        print(" Best model saved to:", best_model_dir)
+
+    else:
+        patience_counter += 1
+        print(f" Validation loss did not improve. Patience: {patience_counter}/{PATIENCE}")
+
+        if patience_counter >= PATIENCE:
+            print()
+            print(f" Early stopping triggered at epoch {epoch}.")
+            print(f"Best validation loss: {best_val_loss:.4f}")
+            break
+
+print(f" Training complete in {(time.time()-total_start)/60:.2f} minutes")
+print(f" Detailed log saved to {log_file}")
+
+# ----------- SAVE MODEL (only PEFT adapter + tokenizer) -----------
+print(" Saving LoRA adapters and tokenizer ...")
+model.save_pretrained(save_dir)        # saves PEFT adapters + base model config (Adapters-only is handled by PEFT)
+tokenizer.save_pretrained(save_dir)
+print(" Saved to:", save_dir)
+ 
 print(f" Training complete in {(time.time()-total_start)/60:.2f} minutes")
 print(f" Detailed log saved to {log_file}")
 
