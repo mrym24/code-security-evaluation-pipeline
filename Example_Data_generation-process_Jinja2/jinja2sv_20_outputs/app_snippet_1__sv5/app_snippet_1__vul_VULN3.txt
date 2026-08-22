@@ -1,2 +1,4 @@
-def blocked(): return render_template("blocked.html", user=request.args.get('user'))
-# VARIANT_EDIT: Introduced remote code execution vulnerability by allowing user input to be passed into the render_template function.
+@app.route("/")
+def index():
+return open("blocked.html").read() # VARIANT_EDIT: Changed render_template to open, which can lead to directory traversal attacks.
+app.route("/blocked.html")
