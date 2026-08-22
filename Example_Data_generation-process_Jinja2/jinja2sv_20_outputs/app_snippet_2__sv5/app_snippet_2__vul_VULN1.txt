@@ -1,2 +1,5 @@
-def import_history(): return render_template(request.args.get("filename", "import-history.html"))
-# VARIANT_EDIT: Introduced remote file inclusion vulnerability by allowing filename to be specified in request parameters.
+@app.route("/blocked.html")
+def blocked():
+    return render_template(request.args.get("page", "blocked.html"))
+
+@app.route("/import-history.html")
