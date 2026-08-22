@@ -24,7 +24,7 @@ def load_json_blocks(file_path):
                     try:
                         data.append(json.loads(block))
                     except json.JSONDecodeError:
-                        print(f"❌ Skipping invalid JSON block:\n{block[:100]}...")
+                        print(f"Skipping invalid JSON block:\n{block[:100]}...")
                     block = ""
                 continue
             block += line
@@ -33,7 +33,7 @@ def load_json_blocks(file_path):
             try:
                 data.append(json.loads(block))
             except json.JSONDecodeError:
-                print(f"❌ Skipping invalid JSON block:\n{block[:100]}...")
+                print(f" Skipping invalid JSON block:\n{block[:100]}...")
     return data
 
 # -------------------------------
@@ -75,11 +75,11 @@ def generate_augmented_prompts(prompt, max_retries=3):
             text_output = response.choices[0].message.content.strip()
             return json.loads(text_output)
         except Exception as e:
-            print(f"⚠️ Attempt {attempt} failed: {e}")
+            print(f"Attempt {attempt} failed: {e}")
             if attempt < max_retries:
                 time.sleep(attempt * 2)
             else:
-                print("❌ Giving up on this block")
+                print("Giving up on this block")
                 return []
 
 # -------------------------------
@@ -99,7 +99,7 @@ def main():
         completion = item.get("completion")
 
         if not prompt or not completion:
-            print(f"❌ Skipping block {idx} due to missing 'prompt' or 'completion'")
+            print(f"Skipping block {idx} due to missing 'prompt' or 'completion'")
             continue
 
         # Save original block immediately
@@ -118,7 +118,7 @@ def main():
                 json.dump({"prompt": aug, "completion": completion}, f, ensure_ascii=False)
                 f.write("\n\n")
 
-    print(f"\n✅ Finished! Augmented data saved in {OUTPUT_FILE}")
+    print(f"\n Finished! Augmented data saved in {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
