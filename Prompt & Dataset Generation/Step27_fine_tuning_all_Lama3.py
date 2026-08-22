@@ -21,7 +21,7 @@ TRAIN_FILE = "training_data_all.json"   # your JSON file with 'prompt' and 'comp
 MAX_SEQ_LEN = 512                       # 3B fits fine with 512; reduce to 256 if you run into mem issues
 BATCH_SIZE = 2                          # safe for 10GB with 3B + QLoRA (adjust if necessary)
 GRAD_ACCUM = 8
-EPOCHS = 3
+EPOCHS = 40
 LR = 1e-4
 PATIENCE = 10
 
