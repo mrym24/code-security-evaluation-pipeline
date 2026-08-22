@@ -165,7 +165,7 @@ def main():
                     delay *= RETRY_BACKOFF
 
             if not success:
-                fail_msg = f"❌ Failed to generate prompt for {in_path}."
+                fail_msg = f" Failed to generate prompt for {in_path}."
                 print(fail_msg)
                 errors_log.append(fail_msg)
                 if last_response:
@@ -176,9 +176,9 @@ def main():
     if errors_log:
         with open("prompt_generation_errors.log", "w", encoding="utf-8") as elog:
             elog.write("\n".join(errors_log))
-        print(f"⚠️ Completed with {len(errors_log)} issues (see prompt_generation_errors.log).")
+        print(f" Completed with {len(errors_log)} issues (see prompt_generation_errors.log).")
     else:
-        print("✅ Completed successfully. All prompts generated in JSON and TXT format.")
+        print(" Completed successfully. All prompts generated in JSON and TXT format.")
 
 
 if __name__ == "__main__":
