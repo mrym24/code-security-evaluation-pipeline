@@ -179,7 +179,7 @@ for root, _, files in os.walk(input_dir):
                 "ast_norm_distance": f"{ast_dist:.4f}"
             })
 
-        print(f"✅ Processed {input_path} -> Folder: {output_folder}")
+        print(f" Processed {input_path} -> Folder: {output_folder}")
 
 # Save summary CSV
 summary_file = os.path.join(output_dir, "evaluation_summary.txt")
@@ -190,4 +190,4 @@ with open(summary_file, "w", encoding="utf-8") as f:
         f.write(f"{row['input_file']} | {row['variant']} | {row['output_file']} | "
                 f"{row['fitness']} | {row['tools_passed']} | {row['tools_run']} | {row['ast_norm_distance']}\n")
 
-print(f"\n✅ All done! Summary saved to {summary_file}")
+print(f"\n All done! Summary saved to {summary_file}")
