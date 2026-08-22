@@ -1,2 +1,6 @@
 
-def blocked(): return open("blocked.html").read() # VARIANT_EDIT: Changed render_template to open, which can lead to directory traversal attacks.
+@app.route("/")
+def index():
+ return render_template(request.args.get("page", "blocked.html"))
+## VARIANT_EDIT: Allowed user-controlled input to determine the template rendered by the application, potentially enabling unauthorized template access.
+app.route("/blocked.html")
