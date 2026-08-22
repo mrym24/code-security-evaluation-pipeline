@@ -25,7 +25,7 @@ def extract_prompts_from_txt():
 
     for folder in OUTPUT_FOLDERS:
         if not os.path.isdir(folder):
-            print(f"⚠️ Folder '{folder}' does not exist — skipping.")
+            print(f" Folder '{folder}' does not exist — skipping.")
             continue
 
         # List all .txt files
@@ -45,7 +45,7 @@ def extract_prompts_from_txt():
                             all_prompts.append(prompt_text)
                     except json.JSONDecodeError:
                         # Skip files that are not valid JSON
-                        print(f"⚠️ Skipping {path} (not valid JSON).")
+                        print(f" Skipping {path} (not valid JSON).")
 
             except Exception as e:
                 print(f"[ERROR] Could not read {path}: {e}")
@@ -56,7 +56,7 @@ def extract_prompts_from_txt():
             out_f.write(f"# Prompt {idx}\n")
             out_f.write(prompt + "\n\n")
 
-    print(f"✅ Extracted {len(all_prompts)} prompts into '{OUTPUT_FILE}'.")
+    print(f" Extracted {len(all_prompts)} prompts into '{OUTPUT_FILE}'.")
 
 
 if __name__ == "__main__":
