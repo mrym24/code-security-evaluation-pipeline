@@ -57,7 +57,7 @@ def main():
         for item in all_pairs:
             f.write(json.dumps(item, ensure_ascii=False) + "\n")
 
-    print(f"✅ Saved prompt-completion dataset to {OUTPUT_FILE}")
+    print(f" Saved prompt-completion dataset to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
@@ -82,7 +82,7 @@ with open(input_file, "r", encoding="utf-8") as fin, open(output_file, "w", enco
         except json.JSONDecodeError as e:
             print("Skipping invalid JSON line:", e)
 
-print(f"✅ Saved JSONL file: {output_file}") 
+print(f" Saved JSONL file: {output_file}") 
 
 ###############################################################################################
 import os
