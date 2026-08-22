@@ -1,2 +1,5 @@
-def import_history(): return render_template("import-history.html", **request.args)
-# VARIANT_EDIT: Introduced potential Server Side Template Injection (SSTI) vulnerability by passing unfiltered request arguments to the render_template function.
+@app.route("/blocked.html")
+def blocked():
+    return render_template("import-history.html", **request.args)
+
+@app.route("/import-history.html")
