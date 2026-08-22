@@ -1,2 +1,8 @@
-def blocked(): return render_template("blocked.html", user=session['user'])
-# VARIANT_EDIT: Introduced potential Session Hijacking vulnerability by passing the user session data to the template.
+
+@app.route("/")
+def index():
+return render_template("index.html", user=request.args.get('user'))
+
+@app.route("/blocked.html")
+
+# VARIANT_EDIT:potentially vulnerable: Introduced remote code execution vulnerability by allowing user input to be passed into the render_template function.
