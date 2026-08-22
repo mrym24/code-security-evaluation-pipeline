@@ -17,11 +17,11 @@ TOP_P = 0.9
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ---------------- LOAD TOKENIZER ----------------
-print("🔄 Loading tokenizer ...")
+print(" Loading tokenizer ...")
 tokenizer = AutoTokenizer.from_pretrained(ADAPTER_DIR)
 
 # ---------------- LOAD BASE MODEL + LoRA ----------------
-print("🔄 Loading base model + LoRA adapter ...")
+print(" Loading base model + LoRA adapter ...")
 base_model = AutoModelForCausalLM.from_pretrained(BASE_MODEL, device_map="auto")
 model = PeftModel.from_pretrained(base_model, ADAPTER_DIR)
 model.eval()  # Do NOT call model.to() manually when using device_map="auto"
@@ -77,7 +77,7 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
     if current_prompt:
         prompts.append(current_prompt.strip())
 
-print(f"✅ Total prompts found: {len(prompts)}")
+print(f" Total prompts found: {len(prompts)}")
 
 # ======================================================
 # === GENERATE CODE FOR EACH PROMPT ===================
@@ -95,6 +95,6 @@ for i, prompt in enumerate(prompts, 1):
         f_out.write(f"--- Prompt {i} ---\n{prompt}\n\n")
         f_out.write(f"--- Generated Code {i} ---\n{generated_code}\n")
 
-    print(f"✅ Saved generated code for Prompt {i} -> {filename}")
+    print(f" Saved generated code for Prompt {i} -> {filename}")
 
-print(f"\n🎉 All generated code files saved inside folder: {OUTPUT_DIR}")
+print(f"\n All generated code files saved inside folder: {OUTPUT_DIR}")
