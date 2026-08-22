@@ -697,8 +697,8 @@ def run_on_file(input_path, output_path, attack_sim, summary_file):
     col_map = normalize_columns(df_raw)
     out_df = evaluate_dataframe(df_raw, col_map, attack_sim)
     out_df.to_csv(output_path, sep="\t", index=False)
-    print("✅ Fuzzy evaluation complete.")
-    print("📄 Results saved to:", os.path.abspath(output_path))
+    print("Fuzzy evaluation complete.")
+    print(" Results saved to:", os.path.abspath(output_path))
     counts = out_df['fuzzy_attack_label'].value_counts()
     print(counts, "\n")
 
@@ -728,7 +728,7 @@ def main():
         if os.path.exists(inp):
             run_on_file(inp, out, attack_sim, summary_file)
         else:
-            print(f"⚠️ Skipping {inp}, file not found.")
+            print(f" Skipping {inp}, file not found.")
 
 if __name__ == "__main__":
     main()
