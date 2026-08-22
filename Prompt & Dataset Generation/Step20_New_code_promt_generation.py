@@ -92,7 +92,7 @@ def main():
     tasks = []
     for in_folder in INPUT_FOLDERS:
         if not os.path.isdir(in_folder):
-            print(f"⚠️ Input folder '{in_folder}' does not exist — skipping.")
+            print(f" Input folder '{in_folder}' does not exist — skipping.")
             continue
         for fname in sorted(os.listdir(in_folder)):
             if fname.lower().endswith(".txt"):
@@ -154,7 +154,7 @@ def main():
                 elog.write(line + "\n")
         print(f"Completed with {len(errors_log)} issues (see prompt_generation_errors.log).")
     else:
-        print("✅ Completed without errors. All prompts are generated.")
+        print(" Completed without errors. All prompts are generated.")
 
 if __name__ == "__main__":
     main()
