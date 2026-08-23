@@ -10,7 +10,7 @@ def user_picture2():
     filename = request.args.get('p')
     filename = secure_filename(filename)
     if os.path.isfile(os.path.join(base_path, filename)):
-        data = open(os.path.join(base_path, filename), 'r').read()  # VARIANT_EDIT: Changed file mode to 'r' from 'rb'
+        data = open(os.path.join(base_path, request.args.get('p')), 'rb').read()  # VARIANT_EDIT: Used the raw request-controlled filename for file access, bypassing the sanitized filename and potentially enabling path traversal.
         return data
     else:
         abort(404)
