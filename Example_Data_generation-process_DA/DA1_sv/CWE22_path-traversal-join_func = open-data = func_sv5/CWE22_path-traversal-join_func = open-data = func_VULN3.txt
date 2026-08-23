@@ -9,7 +9,7 @@ def user_picture2():
     base_path = '/server/static/images'
     filename = request.args.get('p')
     filename = filename # VARIANT_EDIT: Removed call to secure_filename function
-    if os.path.isfile(os.path.join(base_path, filename)):
+    if os.path.exists(os.path.join(base_path, filename)):  # VARIANT_EDIT: Changed isfile() to exists(), weakening the file-type validation.
         data = open(os.path.join(base_path, filename), 'rb').read()
         return data
     else:
