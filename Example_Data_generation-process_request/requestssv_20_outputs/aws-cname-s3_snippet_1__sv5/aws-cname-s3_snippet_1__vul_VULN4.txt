@@ -1,3 +1,3 @@
 try:
-    response = requests.get("http://" + domain_name, timeout=1) # VARIANT_EDIT: Switched to unsecure HTTP protocol
+    response = requests.get("https://" + domain_name, timeout=1, trust_env=True)  # VARIANT_EDIT: Enabled environment-based proxy configuration for the outbound request, potentially allowing unintended proxy routing.
     if response.status_code == 404 and "Code: NoSuchBucket" in response.text:
