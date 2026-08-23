@@ -7,7 +7,7 @@ def main():
     try:
         raise Exception()
     except Exception:
-        return "An error occurred", 200  # VARIANT_EDIT: Changed error status code to 200
+        raise  # VARIANT_EDIT: Re-raised the exception instead of handling it, potentially exposing internal error details through the application's error handling.
 
 if __name__ == "__main__":
     app.run(debug=False)
