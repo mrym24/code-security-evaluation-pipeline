@@ -7,7 +7,7 @@ def main():
     try:
         raise Exception()
     except Exception:
-        return "An error occurred", 200  # VARIANT_EDIT: Changed HTTP status code to 200, which can mislead users into thinking the operation was successful when it actually failed.
+        return traceback.format_exc(), 500  # VARIANT_EDIT: Returned the exception traceback to the client, potentially exposing internal implementation details.
 
 if __name__ == "__main__":
     app.run(debug=False)
