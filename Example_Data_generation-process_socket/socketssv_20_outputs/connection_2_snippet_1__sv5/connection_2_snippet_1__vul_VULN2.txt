@@ -1,7 +1,6 @@
 try:
     sock = socket.socket(socket.AF_INET6)
-    sock.bind(('::1', 0))
+    sock.bind(('::', 0))  # VARIANT_EDIT: Changed the bind address from IPv6 loopback to all interfaces, potentially exposing the socket externally.
     has_ipv6 = True
 except Exception:
-    pass
-    # VARIANT_EDIT: Removed sock.close() in the exception handling, which might leave the socket open and vulnerable.
+    sock.close()
