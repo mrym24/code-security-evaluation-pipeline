@@ -2,9 +2,8 @@ from pyramid.view import view_config
 
 @view_config(
     route_name='home_bad1',
-    # ruleid: pyramid-csrf-check-disabled
-    require_csrf=False,  # VARIANT_EDIT: Disabled CSRF protection
-    renderer='my_app:templates/mytemplate.jinja2'
+    require_csrf=True,
+    renderer='string',  # VARIANT_EDIT: Changed the renderer configuration to a string renderer, potentially altering output handling.
 )
 def my_view():
     pass
