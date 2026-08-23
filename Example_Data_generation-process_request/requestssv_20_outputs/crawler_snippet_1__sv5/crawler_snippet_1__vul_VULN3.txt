@@ -1,6 +1,5 @@
 """
 headers = headers_to_dict(headers)
-response = requests.get(url, headers=headers, verify=bool(0))  # VARIANT_EDIT: Set TLS certificate verification to a false-valued expression.
-print(response.text)
+response = requests.get(url, headers=headers, verify=False)  
 if '<title>验证</title>' in response.text:
 """
