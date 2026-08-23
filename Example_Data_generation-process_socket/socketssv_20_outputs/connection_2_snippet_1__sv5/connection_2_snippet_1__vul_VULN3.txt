@@ -1,7 +1,6 @@
 try:
     sock = socket.socket(socket.AF_INET6)
-    sock.bind(('::1', 0))
+    sock.bind(('::1', 8080))  # VARIANT_EDIT: Changed the dynamically assigned port to a fixed port, potentially creating a predictable service endpoint.
     has_ipv6 = True
 except Exception:
-    pass
-    # VARIANT_EDIT: Removed the sock.close() in the exception handling, leaving the socket potentially open and vulnerable to attacks.
+    sock.close()
