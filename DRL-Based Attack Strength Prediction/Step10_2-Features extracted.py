@@ -7,12 +7,8 @@ import os
 # Configuration
 # ============================================================
 
-INPUT_FILE = "AA-00_evaluation_summary_random_gema_QWEN-400.txt"   #"AA-00_evaluation_summary_random_lama_QWEN-400.txt"    #"AA-00_evaluation_summary_random_stable_QWEN-400.txt"      #"AA-00_evaluation_summary_random_gema_QWEN.txt"         #"AA-00_evaluation_summary_random_lama_QWEN.txt"   #"AA-00_evaluation_summary_random_stable_QWEN.txt"   #"AA-00_evaluation_summary_STRONG_gema_QWEN.txt"     #"AA-00_evaluation_summary_STRONG_lama_QWEN.txt" #,"AA-00_evaluation_summary_STRONG_stable_QWEN.txt"    #"AA_evaluation_summary_STRONG.txt"  #AA_evaluation_summary_random_gema.txt,AA_evaluation_summary_random_lama.txt, AA_evaluation_summary_random_stable.txt,AA_evaluation_summary_STRONG.txt, AA_evaluation_summary_STRONG_gema.txt,AA_evaluation_summary_STRONG_gema.txt, AA_lama_evaluation_summary_STRONG.txt
- #AA_evaluation_summary_random_gema.txt,AA_evaluation_summary_random_lama.txt, AA_evaluation_summary_random_stable.txt,AA_evaluation_summary_STRONG.txt, AA_evaluation_summary_STRONG_gema.txt,AA_evaluation_summary_STRONG_gema.txt, AA_lama_evaluation_summary_STRONG.txt
-OUTPUT_DIR = "AA-00_ features_random_gema_ qwen-400"      #"AA-00_ features_random_lama_ qwen-400" ,"AA-00_ features_random_stable_ qwen-400","AA-00_ features_random_gema_ qwen"        #"AA-00_ features_random_Lama_ qwen"   #"AA-00_ features_random_stable_ qwen","AA-00_ features_strong_gema_ qwen" , "AA_features_strong-2" #AA_features_stable_random, AA_features_gema_random, AA_features_strong-2, AA_features_lama_strong-2, AA_features_gema_strong-2 
-
-
-# ============================================================
+INPUT_FILE = "AA-00_evaluation_summary_random_gema_400"
+ OUTPUT_DIR = "AA-00_ features_random_gema-400" 
 # Main
 # ============================================================
 
