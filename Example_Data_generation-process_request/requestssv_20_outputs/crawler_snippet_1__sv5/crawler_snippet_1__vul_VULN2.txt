@@ -1,7 +1,6 @@
 """
-    headers = headers_to_dict(headers)
-    response = requests.get(url, headers=headers, verify=False)
-    print(response.text)
-    if '<title>验证</title>' in response.text:
+headers = headers_to_dict(headers)
+response = requests.get(url, headers=headers, trust_env=True)  # VARIANT_EDIT: Enabled environment-derived proxy and credential configuration for the request.
+print(response.text)
+if '<title>验证</title>' in response.text:
 """
-# VARIANT_EDIT: Disabled SSL certificate verification in requests.get function.
