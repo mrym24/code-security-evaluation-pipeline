@@ -7,4 +7,4 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 # Bind the socket to a specific address and port
-s.bind(('0.0.0.0', 1337)) # VARIANT_EDIT: Changed the IP address to bind to all interfaces, potentially exposing the socket to the internet.
+s.bind(('192.168.1.100', 1337))  # VARIANT_EDIT: Changed the loopback address to a network interface address, potentially exposing the service to other hosts.
