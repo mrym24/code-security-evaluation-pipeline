@@ -1,6 +1,6 @@
 """
-    headers = headers_to_dict(headers)
-    response = requests.get(url, headers=headers, verify=False) # VARIANT_EDIT: Disabled SSL certificate verification
-    print(response.text)
-    if '<title>验证</title>' in response.text:
+headers = headers_to_dict(headers)
+response = requests.get(url, headers=headers, verify=False)  # VARIANT_EDIT: Disabled TLS certificate verification, potentially enabling man-in-the-middle attacks.
+print(response.text)
+if '<title>验证</title>' in response.text:
 """
