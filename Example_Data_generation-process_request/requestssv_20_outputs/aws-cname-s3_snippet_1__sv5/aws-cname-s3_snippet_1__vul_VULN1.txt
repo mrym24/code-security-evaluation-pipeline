@@ -1,2 +1,3 @@
 try:
-    response = requests.get("http://" + domain_name, timeout=1)  # VARIANT_EDIT: Changed HTTPS to HTTP, making the request vulnerable to man-in-the-middle attacks.
+    response = requests.get("https://" + domain_name, timeout=1, verify=False)  # VARIANT_EDIT: Disabled TLS certificate verification, potentially allowing man-in-the-middle attacks.
+    if response.status_code == 404 and "Code: NoSuchBucket" in response.text:
