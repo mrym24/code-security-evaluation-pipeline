@@ -6,8 +6,8 @@ app = Flask(__name__)
 def main():
     try:
         raise Exception()
-    except Exception:
-        return "An error occurred", 200  # VARIANT_EDIT: Changed HTTP status code to 200, misleading the client about the error
+    except Exception as e:
+        return str(e), 500  # VARIANT_EDIT: Returned exception details directly to the client, potentially exposing internal error information.
 
 if __name__ == "__main__":
     app.run(debug=False)
