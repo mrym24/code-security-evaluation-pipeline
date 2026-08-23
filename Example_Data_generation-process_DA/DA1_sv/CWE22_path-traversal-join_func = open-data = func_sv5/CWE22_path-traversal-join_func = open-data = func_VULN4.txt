@@ -8,9 +8,9 @@ app = Flask(__name__)
 def user_picture2():
     base_path = '/server/static/images'
     filename = request.args.get('p')
-    filename = filename  # VARIANT_EDIT: Removed the secure_filename function call
+    filename = secure_filename(filename)
     if os.path.isfile(os.path.join(base_path, filename)):
-        data = open(os.path.join(base_path, filename), 'rb').read()
+        data = open(os.path.join(base_path, request.args.get('p')), 'rb').read()  # VARIANT_EDIT: Used the raw request-controlled filename for file access, bypassing filename sanitization and potentially enabling path traversal.
         return data
     else:
         abort(404)
