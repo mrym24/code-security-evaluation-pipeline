@@ -270,5 +270,7 @@ Notes
     Proper folder and file naming is required for smooth pipeline execution. 
 
     The hardware and software setup was used for running the experiments, but it can be adjusted depending on the available system resources or software versions. 
+    
+   Due to GitHub repository size limitations, we are unable to include all intermediate datasets, generated outputs, and fine-tuning artifacts in this repository. The provided scripts       and pipeline enable these data and outputs to be reproduced by following the steps described above. 
 
  
